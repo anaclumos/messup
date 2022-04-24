@@ -27,6 +27,7 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="LinkedInLoginButtonDidPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qSq-Me-eQV"/>
+                                    <segue destination="lrD-f5-hfX" kind="presentation" id="w68-jk-wNw"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -44,6 +45,62 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="130.58035714285714"/>
+        </scene>
+        <!--Linked In Login View Controller-->
+        <scene sceneID="Nqm-B2-NkQ">
+            <objects>
+                <viewController id="lrD-f5-hfX" customClass="LinkedInLoginViewController" customModule="MessUp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tUm-HR-8DF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x9R-cf-rLH">
+                                <rect key="frame" x="0.0" y="44" width="414" height="798"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="O8M-fI-fBv">
+                                <rect key="frame" x="0.0" y="44" width="414" height="798"/>
+                            </activityIndicatorView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oHW-zU-pU5">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="LinkedIn Login" id="aXZ-UL-Ncv">
+                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="L4A-Pd-stQ">
+                                            <connections>
+                                                <action selector="cancelButtonDidPress:" destination="lrD-f5-hfX" id="YoO-Og-5BS"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="TXJ-ZC-nLr"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="O8M-fI-fBv" firstAttribute="top" secondItem="TXJ-ZC-nLr" secondAttribute="top" id="43P-DX-WGH"/>
+                            <constraint firstItem="TXJ-ZC-nLr" firstAttribute="trailing" secondItem="O8M-fI-fBv" secondAttribute="trailing" id="ISz-Oq-gwR"/>
+                            <constraint firstItem="x9R-cf-rLH" firstAttribute="top" secondItem="TXJ-ZC-nLr" secondAttribute="top" id="LQ7-qS-7ZD"/>
+                            <constraint firstItem="TXJ-ZC-nLr" firstAttribute="bottom" secondItem="x9R-cf-rLH" secondAttribute="bottom" id="QAr-fZ-gCp"/>
+                            <constraint firstItem="O8M-fI-fBv" firstAttribute="leading" secondItem="TXJ-ZC-nLr" secondAttribute="leading" id="RyW-7a-8oG"/>
+                            <constraint firstItem="TXJ-ZC-nLr" firstAttribute="bottom" secondItem="O8M-fI-fBv" secondAttribute="bottom" id="jAA-Eq-3Qe"/>
+                            <constraint firstItem="x9R-cf-rLH" firstAttribute="leading" secondItem="TXJ-ZC-nLr" secondAttribute="leading" id="nwW-Ac-l0s"/>
+                            <constraint firstItem="TXJ-ZC-nLr" firstAttribute="trailing" secondItem="x9R-cf-rLH" secondAttribute="trailing" id="ywr-fH-XW1"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="LinkedInLoginView" destination="x9R-cf-rLH" id="d7N-7q-8uD"/>
+                        <outlet property="spinner" destination="O8M-fI-fBv" id="kVh-IG-dYX"/>
+                        <outlet property="view" destination="O8M-fI-fBv" id="z4g-2s-arW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r5g-NY-Mlm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="941" y="131"/>
         </scene>
     </scenes>
     <resources>
