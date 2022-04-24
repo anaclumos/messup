@@ -1,13 +1,13 @@
 //
-//  MessupUITestsLaunchTests.swift
-//  MessupUITests
+//  MessUpUITestsLaunchTests.swift
+//  MessUpUITests
 //
 //  Created by Sunghyun Cho on 4/20/22.
 //
 
 import XCTest
 
-class MessupUITestsLaunchTests: XCTestCase {
+class MessUpUITestsLaunchTests: XCTestCase {
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true
     }

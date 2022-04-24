@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  Messup
+//  MessUp
 //
 //  Created by Sunghyun Cho on 4/20/22.
 //

@@ -1,13 +1,13 @@
 //
-//  MessupUITests.swift
-//  MessupUITests
+//  MessUpUITests.swift
+//  MessUpUITests
 //
 //  Created by Sunghyun Cho on 4/20/22.
 //
 
 import XCTest
 
-class MessupUITests: XCTestCase {
+class MessUpUITests: XCTestCase {
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
 

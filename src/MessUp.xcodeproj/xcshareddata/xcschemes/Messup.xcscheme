@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "509929072810EAC80035E1AF"
-               BuildableName = "Messup.app"
+               BuildableName = "MessUp.app"
                BlueprintName = "MessUp"
-               ReferencedContainer = "container:Messup.xcodeproj">
+               ReferencedContainer = "container:MessUp.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "5099291D2810EACA0035E1AF"
-               BuildableName = "MessupTests.xctest"
+               BuildableName = "MessUpTests.xctest"
                BlueprintName = "MessUpTests"
-               ReferencedContainer = "container:Messup.xcodeproj">
+               ReferencedContainer = "container:MessUp.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "509929272810EACA0035E1AF"
-               BuildableName = "MessupUITests.xctest"
+               BuildableName = "MessUpUITests.xctest"
                BlueprintName = "MessUpUITests"
-               ReferencedContainer = "container:Messup.xcodeproj">
+               ReferencedContainer = "container:MessUp.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -65,9 +65,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "509929072810EAC80035E1AF"
-            BuildableName = "Messup.app"
+            BuildableName = "MessUp.app"
             BlueprintName = "MessUp"
-            ReferencedContainer = "container:Messup.xcodeproj">
+            ReferencedContainer = "container:MessUp.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <EnvironmentVariables>
@@ -94,9 +94,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "509929072810EAC80035E1AF"
-            BuildableName = "Messup.app"
+            BuildableName = "MessUp.app"
             BlueprintName = "MessUp"
-            ReferencedContainer = "container:Messup.xcodeproj">
+            ReferencedContainer = "container:MessUp.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

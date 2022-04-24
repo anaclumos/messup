@@ -16,9 +16,9 @@
 		509929132810EAC80035E1AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 509929112810EAC80035E1AF /* Main.storyboard */; };
 		509929152810EAC90035E1AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 509929142810EAC90035E1AF /* Assets.xcassets */; };
 		509929182810EAC90035E1AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 509929162810EAC90035E1AF /* LaunchScreen.storyboard */; };
-		509929232810EACA0035E1AF /* MessupTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509929222810EACA0035E1AF /* MessupTests.swift */; };
-		5099292D2810EACA0035E1AF /* MessupUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5099292C2810EACA0035E1AF /* MessupUITests.swift */; };
-		5099292F2810EACA0035E1AF /* MessupUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5099292E2810EACA0035E1AF /* MessupUITestsLaunchTests.swift */; };
+		509929232810EACA0035E1AF /* MessUpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509929222810EACA0035E1AF /* MessUpTests.swift */; };
+		5099292D2810EACA0035E1AF /* MessUpUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5099292C2810EACA0035E1AF /* MessUpUITests.swift */; };
+		5099292F2810EACA0035E1AF /* MessUpUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5099292E2810EACA0035E1AF /* MessUpUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,14 +27,14 @@
 			containerPortal = 509929002810EAC80035E1AF /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 509929072810EAC80035E1AF;
-			remoteInfo = Messup;
+			remoteInfo = MessUp;
 		};
 		509929292810EACA0035E1AF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 509929002810EAC80035E1AF /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 509929072810EAC80035E1AF;
-			remoteInfo = Messup;
+			remoteInfo = MessUp;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -51,10 +51,10 @@
 		509929172810EAC90035E1AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		509929192810EAC90035E1AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5099291E2810EACA0035E1AF /* MessUpTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MessUpTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		509929222810EACA0035E1AF /* MessupTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessupTests.swift; sourceTree = "<group>"; };
+		509929222810EACA0035E1AF /* MessUpTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessUpTests.swift; sourceTree = "<group>"; };
 		509929282810EACA0035E1AF /* MessUpUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MessUpUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5099292C2810EACA0035E1AF /* MessupUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessupUITests.swift; sourceTree = "<group>"; };
-		5099292E2810EACA0035E1AF /* MessupUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessupUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		5099292C2810EACA0035E1AF /* MessUpUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessUpUITests.swift; sourceTree = "<group>"; };
+		5099292E2810EACA0035E1AF /* MessUpUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessUpUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,7 +164,7 @@
 		509929212810EACA0035E1AF /* MessUpTests */ = {
 			isa = PBXGroup;
 			children = (
-				509929222810EACA0035E1AF /* MessupTests.swift */,
+				509929222810EACA0035E1AF /* MessUpTests.swift */,
 			);
 			path = MessUpTests;
 			sourceTree = "<group>";
@@ -172,8 +172,8 @@
 		5099292B2810EACA0035E1AF /* MessUpUITests */ = {
 			isa = PBXGroup;
 			children = (
-				5099292C2810EACA0035E1AF /* MessupUITests.swift */,
-				5099292E2810EACA0035E1AF /* MessupUITestsLaunchTests.swift */,
+				5099292C2810EACA0035E1AF /* MessUpUITests.swift */,
+				5099292E2810EACA0035E1AF /* MessUpUITestsLaunchTests.swift */,
 			);
 			path = MessUpUITests;
 			sourceTree = "<group>";
@@ -194,7 +194,7 @@
 			dependencies = (
 			);
 			name = MessUp;
-			productName = Messup;
+			productName = MessUp;
 			productReference = 509929082810EAC80035E1AF /* MessUp.app */;
 			productType = "com.apple.product-type.application";
 		};
@@ -212,7 +212,7 @@
 				509929202810EACA0035E1AF /* PBXTargetDependency */,
 			);
 			name = MessUpTests;
-			productName = MessupTests;
+			productName = MessUpTests;
 			productReference = 5099291E2810EACA0035E1AF /* MessUpTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
@@ -230,7 +230,7 @@
 				5099292A2810EACA0035E1AF /* PBXTargetDependency */,
 			);
 			name = MessUpUITests;
-			productName = MessupUITests;
+			productName = MessUpUITests;
 			productReference = 509929282810EACA0035E1AF /* MessUpUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
@@ -322,7 +322,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				509929232810EACA0035E1AF /* MessupTests.swift in Sources */,
+				509929232810EACA0035E1AF /* MessUpTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,8 +330,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5099292D2810EACA0035E1AF /* MessupUITests.swift in Sources */,
-				5099292F2810EACA0035E1AF /* MessupUITestsLaunchTests.swift in Sources */,
+				5099292D2810EACA0035E1AF /* MessUpUITests.swift in Sources */,
+				5099292F2810EACA0035E1AF /* MessUpUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -493,7 +493,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = QKPXP9788L;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Messup/Info.plist;
+				INFOPLIST_FILE = MessUp/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Mess Up";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -507,7 +507,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = sh.cho.Messup;
+				PRODUCT_BUNDLE_IDENTIFIER = sh.cho.MessUp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -524,7 +524,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = QKPXP9788L;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Messup/Info.plist;
+				INFOPLIST_FILE = MessUp/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Mess Up";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -538,7 +538,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = sh.cho.Messup;
+				PRODUCT_BUNDLE_IDENTIFIER = sh.cho.MessUp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -557,7 +557,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = sh.cho.MessupTests;
+				PRODUCT_BUNDLE_IDENTIFIER = sh.cho.MessUpTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -577,7 +577,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = sh.cho.MessupTests;
+				PRODUCT_BUNDLE_IDENTIFIER = sh.cho.MessUpTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -595,12 +595,12 @@
 				DEVELOPMENT_TEAM = QKPXP9788L;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = sh.cho.MessupUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = sh.cho.MessUpUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Messup;
+				TEST_TARGET_NAME = MessUp;
 			};
 			name = Debug;
 		};
@@ -613,12 +613,12 @@
 				DEVELOPMENT_TEAM = QKPXP9788L;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = sh.cho.MessupUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = sh.cho.MessUpUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Messup;
+				TEST_TARGET_NAME = MessUp;
 			};
 			name = Release;
 		};

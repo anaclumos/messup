@@ -1,6 +1,6 @@
 //
 //  LinkedInCredentials.swift
-//  Messup
+//  MessUp
 //
 //  Created by Sunghyun Cho on 4/23/22.
 //
