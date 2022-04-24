@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		504E04F42814D83800E3C06C /* LinkedInCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504E04F32814D83800E3C06C /* LinkedInCredentials.swift */; };
 		5099290C2810EAC80035E1AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5099290B2810EAC80035E1AF /* AppDelegate.swift */; };
 		5099290E2810EAC80035E1AF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5099290D2810EAC80035E1AF /* SceneDelegate.swift */; };
 		509929102810EAC80035E1AF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5099290F2810EAC80035E1AF /* ViewController.swift */; };
@@ -36,7 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		509929082810EAC80035E1AF /* Messup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Messup.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		504E04F32814D83800E3C06C /* LinkedInCredentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedInCredentials.swift; sourceTree = "<group>"; };
+		509929082810EAC80035E1AF /* MessUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MessUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5099290B2810EAC80035E1AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5099290D2810EAC80035E1AF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		5099290F2810EAC80035E1AF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -44,9 +46,9 @@
 		509929142810EAC90035E1AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		509929172810EAC90035E1AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		509929192810EAC90035E1AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5099291E2810EACA0035E1AF /* MessupTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MessupTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5099291E2810EACA0035E1AF /* MessUpTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MessUpTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		509929222810EACA0035E1AF /* MessupTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessupTests.swift; sourceTree = "<group>"; };
-		509929282810EACA0035E1AF /* MessupUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MessupUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		509929282810EACA0035E1AF /* MessUpUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MessUpUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5099292C2810EACA0035E1AF /* MessupUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessupUITests.swift; sourceTree = "<group>"; };
 		5099292E2810EACA0035E1AF /* MessupUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessupUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -76,63 +78,98 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		509928FF2810EAC80035E1AF = {
+		5020AD062814DB3200C7C6B0 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				5099290A2810EAC80035E1AF /* Messup */,
-				509929212810EACA0035E1AF /* MessupTests */,
-				5099292B2810EACA0035E1AF /* MessupUITests */,
-				509929092810EAC80035E1AF /* Products */,
+				5099290F2810EAC80035E1AF /* ViewController.swift */,
 			);
+			path = View;
 			sourceTree = "<group>";
 		};
-		509929092810EAC80035E1AF /* Products */ = {
+		5020AD072814DB4C00C7C6B0 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				509929082810EAC80035E1AF /* Messup.app */,
-				5099291E2810EACA0035E1AF /* MessupTests.xctest */,
-				509929282810EACA0035E1AF /* MessupUITests.xctest */,
 			);
-			name = Products;
+			path = Controller;
 			sourceTree = "<group>";
 		};
-		5099290A2810EAC80035E1AF /* Messup */ = {
+		5020AD082814DB7600C7C6B0 /* Support */ = {
 			isa = PBXGroup;
 			children = (
 				5099290B2810EAC80035E1AF /* AppDelegate.swift */,
 				5099290D2810EAC80035E1AF /* SceneDelegate.swift */,
-				5099290F2810EAC80035E1AF /* ViewController.swift */,
 				509929112810EAC80035E1AF /* Main.storyboard */,
 				509929142810EAC90035E1AF /* Assets.xcassets */,
 				509929162810EAC90035E1AF /* LaunchScreen.storyboard */,
-				509929192810EAC90035E1AF /* Info.plist */,
 			);
-			path = Messup;
+			path = Support;
 			sourceTree = "<group>";
 		};
-		509929212810EACA0035E1AF /* MessupTests */ = {
+		504E04F22814D81F00E3C06C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				504E04F32814D83800E3C06C /* LinkedInCredentials.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		509928FF2810EAC80035E1AF = {
+			isa = PBXGroup;
+			children = (
+				5099290A2810EAC80035E1AF /* MessUp */,
+				509929212810EACA0035E1AF /* MessUpTests */,
+				5099292B2810EACA0035E1AF /* MessUpUITests */,
+				509929092810EAC80035E1AF /* Products */,
+			);
+			indentWidth = 2;
+			sourceTree = "<group>";
+			tabWidth = 2;
+		};
+		509929092810EAC80035E1AF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				509929082810EAC80035E1AF /* MessUp.app */,
+				5099291E2810EACA0035E1AF /* MessUpTests.xctest */,
+				509929282810EACA0035E1AF /* MessUpUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5099290A2810EAC80035E1AF /* MessUp */ = {
+			isa = PBXGroup;
+			children = (
+				5020AD062814DB3200C7C6B0 /* View */,
+				504E04F22814D81F00E3C06C /* Model */,
+				5020AD072814DB4C00C7C6B0 /* Controller */,
+				5020AD082814DB7600C7C6B0 /* Support */,
+				509929192810EAC90035E1AF /* Info.plist */,
+			);
+			path = MessUp;
+			sourceTree = "<group>";
+		};
+		509929212810EACA0035E1AF /* MessUpTests */ = {
 			isa = PBXGroup;
 			children = (
 				509929222810EACA0035E1AF /* MessupTests.swift */,
 			);
-			path = MessupTests;
+			path = MessUpTests;
 			sourceTree = "<group>";
 		};
-		5099292B2810EACA0035E1AF /* MessupUITests */ = {
+		5099292B2810EACA0035E1AF /* MessUpUITests */ = {
 			isa = PBXGroup;
 			children = (
 				5099292C2810EACA0035E1AF /* MessupUITests.swift */,
 				5099292E2810EACA0035E1AF /* MessupUITestsLaunchTests.swift */,
 			);
-			path = MessupUITests;
+			path = MessUpUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		509929072810EAC80035E1AF /* Messup */ = {
+		509929072810EAC80035E1AF /* MessUp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 509929322810EACA0035E1AF /* Build configuration list for PBXNativeTarget "Messup" */;
+			buildConfigurationList = 509929322810EACA0035E1AF /* Build configuration list for PBXNativeTarget "MessUp" */;
 			buildPhases = (
 				509929042810EAC80035E1AF /* Sources */,
 				509929052810EAC80035E1AF /* Frameworks */,
@@ -142,14 +179,14 @@
 			);
 			dependencies = (
 			);
-			name = Messup;
+			name = MessUp;
 			productName = Messup;
-			productReference = 509929082810EAC80035E1AF /* Messup.app */;
+			productReference = 509929082810EAC80035E1AF /* MessUp.app */;
 			productType = "com.apple.product-type.application";
 		};
-		5099291D2810EACA0035E1AF /* MessupTests */ = {
+		5099291D2810EACA0035E1AF /* MessUpTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 509929352810EACA0035E1AF /* Build configuration list for PBXNativeTarget "MessupTests" */;
+			buildConfigurationList = 509929352810EACA0035E1AF /* Build configuration list for PBXNativeTarget "MessUpTests" */;
 			buildPhases = (
 				5099291A2810EACA0035E1AF /* Sources */,
 				5099291B2810EACA0035E1AF /* Frameworks */,
@@ -160,14 +197,14 @@
 			dependencies = (
 				509929202810EACA0035E1AF /* PBXTargetDependency */,
 			);
-			name = MessupTests;
+			name = MessUpTests;
 			productName = MessupTests;
-			productReference = 5099291E2810EACA0035E1AF /* MessupTests.xctest */;
+			productReference = 5099291E2810EACA0035E1AF /* MessUpTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		509929272810EACA0035E1AF /* MessupUITests */ = {
+		509929272810EACA0035E1AF /* MessUpUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 509929382810EACA0035E1AF /* Build configuration list for PBXNativeTarget "MessupUITests" */;
+			buildConfigurationList = 509929382810EACA0035E1AF /* Build configuration list for PBXNativeTarget "MessUpUITests" */;
 			buildPhases = (
 				509929242810EACA0035E1AF /* Sources */,
 				509929252810EACA0035E1AF /* Frameworks */,
@@ -178,9 +215,9 @@
 			dependencies = (
 				5099292A2810EACA0035E1AF /* PBXTargetDependency */,
 			);
-			name = MessupUITests;
+			name = MessUpUITests;
 			productName = MessupUITests;
-			productReference = 509929282810EACA0035E1AF /* MessupUITests.xctest */;
+			productReference = 509929282810EACA0035E1AF /* MessUpUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -206,7 +243,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 509929032810EAC80035E1AF /* Build configuration list for PBXProject "Messup" */;
+			buildConfigurationList = 509929032810EAC80035E1AF /* Build configuration list for PBXProject "MessUp" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -219,9 +256,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				509929072810EAC80035E1AF /* Messup */,
-				5099291D2810EACA0035E1AF /* MessupTests */,
-				509929272810EACA0035E1AF /* MessupUITests */,
+				509929072810EAC80035E1AF /* MessUp */,
+				5099291D2810EACA0035E1AF /* MessUpTests */,
+				509929272810EACA0035E1AF /* MessUpUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -258,6 +295,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				504E04F42814D83800E3C06C /* LinkedInCredentials.swift in Sources */,
 				509929102810EAC80035E1AF /* ViewController.swift in Sources */,
 				5099290C2810EAC80035E1AF /* AppDelegate.swift in Sources */,
 				5099290E2810EAC80035E1AF /* SceneDelegate.swift in Sources */,
@@ -286,12 +324,12 @@
 /* Begin PBXTargetDependency section */
 		509929202810EACA0035E1AF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 509929072810EAC80035E1AF /* Messup */;
+			target = 509929072810EAC80035E1AF /* MessUp */;
 			targetProxy = 5099291F2810EACA0035E1AF /* PBXContainerItemProxy */;
 		};
 		5099292A2810EACA0035E1AF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 509929072810EAC80035E1AF /* Messup */;
+			target = 509929072810EAC80035E1AF /* MessUp */;
 			targetProxy = 509929292810EACA0035E1AF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -508,7 +546,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Messup.app/Messup";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MessUp.app/MessUp";
 			};
 			name = Debug;
 		};
@@ -528,7 +566,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Messup.app/Messup";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MessUp.app/MessUp";
 			};
 			name = Release;
 		};
@@ -571,7 +609,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		509929032810EAC80035E1AF /* Build configuration list for PBXProject "Messup" */ = {
+		509929032810EAC80035E1AF /* Build configuration list for PBXProject "MessUp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				509929302810EACA0035E1AF /* Debug */,
@@ -580,7 +618,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		509929322810EACA0035E1AF /* Build configuration list for PBXNativeTarget "Messup" */ = {
+		509929322810EACA0035E1AF /* Build configuration list for PBXNativeTarget "MessUp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				509929332810EACA0035E1AF /* Debug */,
@@ -589,7 +627,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		509929352810EACA0035E1AF /* Build configuration list for PBXNativeTarget "MessupTests" */ = {
+		509929352810EACA0035E1AF /* Build configuration list for PBXNativeTarget "MessUpTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				509929362810EACA0035E1AF /* Debug */,
@@ -598,7 +636,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		509929382810EACA0035E1AF /* Build configuration list for PBXNativeTarget "MessupUITests" */ = {
+		509929382810EACA0035E1AF /* Build configuration list for PBXNativeTarget "MessUpUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				509929392810EACA0035E1AF /* Debug */,

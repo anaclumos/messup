@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4sV-P3-hms">
-                                <rect key="frame" x="20" y="801" width="374" height="56"/>
+                                <rect key="frame" x="89.5" y="420" width="235.5" height="56"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="7tz-jW-dIh"/>
                                 </constraints>
@@ -30,9 +30,8 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="4sV-P3-hms" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="6gP-Pl-HYY"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4sV-P3-hms" secondAttribute="trailing" constant="20" id="dw3-sg-AXq"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4sV-P3-hms" secondAttribute="bottom" constant="5" id="pmk-0I-0mf"/>
+                            <constraint firstItem="4sV-P3-hms" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="L6w-2V-aOs"/>
+                            <constraint firstItem="4sV-P3-hms" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="PFm-Fa-8Rq"/>
                         </constraints>
                     </view>
                 </viewController>
