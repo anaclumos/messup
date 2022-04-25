@@ -9,6 +9,10 @@ import Foundation
 import WebKit
 
 class LinkedInLoginViewController: UIViewController, WKNavigationDelegate {
+  private let model = AccessTokenModel.shared
+
+  var onAccessTokenAcquired: (() -> Void)?
+
   @IBOutlet var spinner: UIActivityIndicatorView!
   @IBOutlet var LinkedInLoginView: WKWebView!
   @IBAction func cancelButtonDidPress(_ sender: Any) {
@@ -38,7 +42,6 @@ class LinkedInLoginViewController: UIViewController, WKNavigationDelegate {
   }
 
   func requestAccessToken(code: String) {
-    print("requestAccessToken: \(code)")
     var components = URLComponents()
     components.scheme = "https"
     components.host = LinkedInCredentials.HOST_URL
@@ -46,42 +49,40 @@ class LinkedInLoginViewController: UIViewController, WKNavigationDelegate {
     components.queryItems = [
       URLQueryItem(name: "grant_type", value: "authorization_code"),
       URLQueryItem(name: "code", value: code.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!),
-      URLQueryItem(name: "client_id", value: LinkedInCredentials.CLIENT_ID.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!),
-      URLQueryItem(name: "client_secret", value: LinkedInCredentials.CLIENT_SECRET.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!),
+      URLQueryItem(name: "client_id", value: LinkedInCredentials.CLIENT_ID),
+      URLQueryItem(name: "client_secret", value: LinkedInCredentials.CLIENT_SECRET),
       URLQueryItem(name: "redirect_uri", value: LinkedInCredentials.REDIRECT_URI.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)
     ]
-    DispatchQueue.main.async {
-      self.spinner.startAnimating()
-      URLSession.shared.dataTask(with: components.url!) { data, _, error in
-        if let error = error {
-          print("requestAccessToken: \(error)")
-          return
-        }
-        if let data = data {
-          do {
-            let json = try JSONSerialization.jsonObject(with: data, options: [])
-            print("requestAccessToken: \(json)")
-            if let json = json as? [String: Any] {
-              if let accessToken = json["access_token"] as? String {
-                print("requestAccessToken: \(accessToken)")
-              }
-            }
-          } catch {
-            print("requestAccessToken: \(error)")
-          }
+    print(components.url!)
+    var request = URLRequest(url: components.url!)
+    request.allHTTPHeaderFields = [
+      "Content-Type": "application/x-www-form-urlencoded"
+    ]
+
+    let task = URLSession.shared.dataTask(with: request) { data, _, error in
+      if error != nil {
+        return
+      }
+      if let data = data {
+        do {
+          print("data loaded!: \(String(data: data, encoding: .utf8)!)")
+          let accessToken = try JSONDecoder().decode(LinkedInAccessToken.self, from: data)
+          self.model.setLinkedInAccessToken(linkedinAccessToken: accessToken)
+          self.onAccessTokenAcquired?()
+        } catch {
+          print("requestAccessToken Error: \(error)")
         }
       }
     }
+    task.resume()
   }
 
   func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
     if let url = navigationAction.request.url {
       if url.absoluteString.hasPrefix(LinkedInCredentials.REDIRECT_URI) {
         if let code = url.absoluteString.components(separatedBy: "code=").last {
-          DispatchQueue.main.async {
-            self.requestAccessToken(code: code)
-            self.dismiss(animated: true, completion: nil)
-          }
+          requestAccessToken(code: code)
+          self.dismiss(animated: true, completion: nil)
         }
       }
     }

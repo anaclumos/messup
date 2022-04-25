@@ -15,4 +15,9 @@ class LinkedInAccessToken: Codable {
     case accessToken = "access_token"
     case expiresIn = "expires_in"
   }
+
+  init(json: [String: Any]) {
+    self.accessToken = json["access_token"] as! String
+    self.expiresIn = json["expires_in"] as! Int
+  }
 }

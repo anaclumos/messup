@@ -27,19 +27,33 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="LinkedInLoginButtonDidPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qSq-Me-eQV"/>
-                                    <segue destination="lrD-f5-hfX" kind="presentation" id="w68-jk-wNw"/>
+                                    <segue destination="lrD-f5-hfX" kind="presentation" identifier="LoginWithLinkedIn" id="w68-jk-wNw"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V25-0C-YQ9">
+                                <rect key="frame" x="0.0" y="44" width="414" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="t8K-Fy-S8M"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="V25-0C-YQ9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="2JA-7z-ce8"/>
                             <constraint firstItem="4sV-P3-hms" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="L6w-2V-aOs"/>
                             <constraint firstItem="4sV-P3-hms" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="PFm-Fa-8Rq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="V25-0C-YQ9" secondAttribute="trailing" id="YpS-Di-MCB"/>
+                            <constraint firstItem="V25-0C-YQ9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="c1X-go-pte"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="LinkedInLoginButton" destination="4sV-P3-hms" id="NVb-jm-Y0W"/>
+                        <outlet property="tokenLabel" destination="V25-0C-YQ9" id="Jnj-nM-Ekb"/>
+                        <segue destination="VdD-wJ-Hae" kind="show" identifier="AccessTokenAcquired" id="gcL-Dv-d5Q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -101,6 +115,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r5g-NY-Mlm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="941" y="131"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="rQV-Cg-YWd">
+            <objects>
+                <viewController id="VdD-wJ-Hae" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wld-nX-X4x">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="ghE-Hy-7sI"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="va9-N9-Apm"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ppz-Hy-x4F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="941" y="858"/>
         </scene>
     </scenes>
     <resources>

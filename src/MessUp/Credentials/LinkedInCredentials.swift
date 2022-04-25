@@ -10,7 +10,7 @@ import Foundation
 struct LinkedInCredentials {
   static let CLIENT_ID = ProcessInfo.processInfo.environment["LINKEDIN_CLIENT_ID"]!
   static let CLIENT_SECRET = ProcessInfo.processInfo.environment["LINKEDIN_CLIENT_SECRET"]!
-  static let REDIRECT_URI = "http://localhost:8080/oauth/linkedin"
+  static let REDIRECT_URI = "https://messup.cho.sh/oauth/linkedin"
   static let SCOPE = "r_liteprofile"
   static let HOST_URL = "www.linkedin.com"
   static let AUTH_PATH = "/oauth/v2/authorization"

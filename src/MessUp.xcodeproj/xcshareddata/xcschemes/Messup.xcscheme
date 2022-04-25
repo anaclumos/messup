@@ -78,7 +78,7 @@
          </EnvironmentVariable>
          <EnvironmentVariable
             key = "LINKEDIN_CLIENT_SECRET"
-            value = "&#x2022;&#x2022;&#x2022;&#x2022;&#x2022;&#x2022;&#x2022;&#x2022;&#x2022;&#x2022;&#x2022;&#x2022;&#x2022;&#x2022;&#x2022;&#x2022;"
+            value = "S3SVYX6Jw6JTEvUi"
             isEnabled = "YES">
          </EnvironmentVariable>
       </EnvironmentVariables>
