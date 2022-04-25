@@ -20,6 +20,7 @@
 		5099292D2810EACA0035E1AF /* MessUpUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5099292C2810EACA0035E1AF /* MessUpUITests.swift */; };
 		5099292F2810EACA0035E1AF /* MessUpUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5099292E2810EACA0035E1AF /* MessUpUITestsLaunchTests.swift */; };
 		50BD520328160ACE0099D0DD /* LinkedInLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BD520228160ACE0099D0DD /* LinkedInLoginViewController.swift */; };
+		50BD520528161FCF0099D0DD /* LinkedInAccessToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BD520428161FCF0099D0DD /* LinkedInAccessToken.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		5099292C2810EACA0035E1AF /* MessUpUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessUpUITests.swift; sourceTree = "<group>"; };
 		5099292E2810EACA0035E1AF /* MessUpUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessUpUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		50BD520228160ACE0099D0DD /* LinkedInLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedInLoginViewController.swift; sourceTree = "<group>"; };
+		50BD520428161FCF0099D0DD /* LinkedInAccessToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedInAccessToken.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 			children = (
 				5020AD092814DCE300C7C6B0 /* LinkedInEmailModel.swift */,
 				5020AD0B2814DD0300C7C6B0 /* LinkedInProfileModel.swift */,
+				50BD520428161FCF0099D0DD /* LinkedInAccessToken.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 				5020AD0A2814DCE300C7C6B0 /* LinkedInEmailModel.swift in Sources */,
 				504E04F42814D83800E3C06C /* LinkedInCredentials.swift in Sources */,
 				5099290C2810EAC80035E1AF /* AppDelegate.swift in Sources */,
+				50BD520528161FCF0099D0DD /* LinkedInAccessToken.swift in Sources */,
 				5099290E2810EAC80035E1AF /* SceneDelegate.swift in Sources */,
 				5020AD0C2814DD0300C7C6B0 /* LinkedInProfileModel.swift in Sources */,
 			);
