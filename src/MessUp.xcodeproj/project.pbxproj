@@ -90,13 +90,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		501CC480281785FC00462760 /* environment */ = {
+		501CC480281785FC00462760 /* env */ = {
 			isa = PBXGroup;
 			children = (
 				504E04F32814D83800E3C06C /* LinkedInCredentialsExample.swift */,
 				501CC4812817861C00462760 /* LinkedInCredentials.swift */,
 			);
-			path = environment;
+			path = env;
 			sourceTree = "<group>";
 		};
 		5020AD062814DB3200C7C6B0 /* view */ = {
@@ -163,7 +163,7 @@
 		5099290A2810EAC80035E1AF /* MessUp */ = {
 			isa = PBXGroup;
 			children = (
-				501CC480281785FC00462760 /* environment */,
+				501CC480281785FC00462760 /* env */,
 				5020AD062814DB3200C7C6B0 /* view */,
 				504E04F22814D81F00E3C06C /* model */,
 				5020AD072814DB4C00C7C6B0 /* controller */,
