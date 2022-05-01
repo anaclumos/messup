@@ -23,6 +23,7 @@
 		50BD520328160ACE0099D0DD /* LinkedInLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BD520228160ACE0099D0DD /* LinkedInLoginViewController.swift */; };
 		50BD520528161FCF0099D0DD /* LinkedInAccessToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BD520428161FCF0099D0DD /* LinkedInAccessToken.swift */; };
 		50BD5207281629B90099D0DD /* AccessTokenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BD5206281629B90099D0DD /* AccessTokenModel.swift */; };
+		50F13433281F492A00702224 /* ContactsMatchingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F13432281F492A00702224 /* ContactsMatchingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		50BD520228160ACE0099D0DD /* LinkedInLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedInLoginViewController.swift; sourceTree = "<group>"; };
 		50BD520428161FCF0099D0DD /* LinkedInAccessToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedInAccessToken.swift; sourceTree = "<group>"; };
 		50BD5206281629B90099D0DD /* AccessTokenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessTokenModel.swift; sourceTree = "<group>"; };
+		50F13432281F492A00702224 /* ContactsMatchingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsMatchingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				50BD520228160ACE0099D0DD /* LinkedInLoginViewController.swift */,
+				50F13432281F492A00702224 /* ContactsMatchingViewController.swift */,
 				5020AD0D2814DD5500C7C6B0 /* LoginViewController.swift */,
 			);
 			path = controller;
@@ -321,6 +324,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50F13433281F492A00702224 /* ContactsMatchingViewController.swift in Sources */,
 				50BD520328160ACE0099D0DD /* LinkedInLoginViewController.swift in Sources */,
 				5020AD0E2814DD5500C7C6B0 /* LoginViewController.swift in Sources */,
 				5020AD0A2814DCE300C7C6B0 /* LinkedInEmailModel.swift in Sources */,

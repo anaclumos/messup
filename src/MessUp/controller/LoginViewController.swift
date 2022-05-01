@@ -26,6 +26,10 @@ class LoginViewController: UIViewController {
       vc.onAccessTokenAcquired = {
         DispatchQueue.main.async {
           self.tokenLabel.text = "Access Token: " + (self.model.getLinkedInAccessToken()?.accessToken ?? "Not Provided")
+          self.LinkedInLoginButton.isHidden = true
+          let controller = self.storyboard?.instantiateViewController(withIdentifier: "MessUpTabBarController") as! UITabBarController
+          controller.modalPresentationStyle = .fullScreen
+          self.present(controller, animated: true, completion: nil)
         }
       }
     }

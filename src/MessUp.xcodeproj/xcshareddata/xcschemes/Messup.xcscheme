@@ -73,12 +73,12 @@
       <EnvironmentVariables>
          <EnvironmentVariable
             key = "LINKEDIN_CLIENT_ID"
-            value = "86al4ec70nea5f"
+            value = "This doesn&apos;t work!"
             isEnabled = "YES">
          </EnvironmentVariable>
          <EnvironmentVariable
             key = "LINKEDIN_CLIENT_SECRET"
-            value = "S3SVYX6Jw6JTEvUi"
+            value = "This doesn&apos;t work!"
             isEnabled = "YES">
          </EnvironmentVariable>
       </EnvironmentVariables>
