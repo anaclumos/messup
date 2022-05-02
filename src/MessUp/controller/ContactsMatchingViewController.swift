@@ -9,5 +9,7 @@ import Foundation
 import UIKit
 
 class ContactsMatchingViewController: UITableViewController {
-  
+  @IBAction func refreshButtonDidTapped(_ sender: Any) {
+    print("button tapped")
+  }
 }

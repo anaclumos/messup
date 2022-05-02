@@ -11,7 +11,7 @@
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="MessUp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loginViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="LoginViewController" customModule="MessUp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -107,7 +107,7 @@
         <!--Contacts Matching-->
         <scene sceneID="LfB-jd-bdo">
             <objects>
-                <tableViewController id="zdW-fk-Vge" sceneMemberID="viewController">
+                <tableViewController id="zdW-fk-Vge" customClass="ContactsMatchingViewController" customModule="MessUp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="nV9-Fa-v9K">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -127,7 +127,13 @@
                             <outlet property="delegate" destination="zdW-fk-Vge" id="NOk-X6-9Se"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Contacts Matching" largeTitleDisplayMode="always" id="OEa-vV-lpo"/>
+                    <navigationItem key="navigationItem" title="Contacts Matching" largeTitleDisplayMode="always" id="OEa-vV-lpo">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="WZB-EX-SMh">
+                            <connections>
+                                <action selector="refreshButtonDidTapped:" destination="zdW-fk-Vge" id="0XF-9A-CvQ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L7B-OU-QwW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -136,7 +142,7 @@
         <!--More-->
         <scene sceneID="2nI-l7-qAV">
             <objects>
-                <tableViewController id="Ndo-tS-Fkv" sceneMemberID="viewController">
+                <tableViewController id="Ndo-tS-Fkv" customClass="MoreTableViewController" customModule="MessUp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="lLo-1n-1qH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -156,7 +162,13 @@
                             <outlet property="delegate" destination="Ndo-tS-Fkv" id="T9a-oi-mU6"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="More" largeTitleDisplayMode="always" id="ygl-fb-jVy"/>
+                    <navigationItem key="navigationItem" title="More" largeTitleDisplayMode="always" id="ygl-fb-jVy">
+                        <barButtonItem key="rightBarButtonItem" title="Reset Token" id="Fi1-gb-cHz">
+                            <connections>
+                                <action selector="resetTokenDidTapped:" destination="Ndo-tS-Fkv" id="YtC-Rk-WZH"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KRz-YZ-ayh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

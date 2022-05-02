@@ -21,9 +21,10 @@ class AccessTokenModel {
     }
     let managedContext = appDelegate.persistentContainer.viewContext
     let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "TwitterAccessToken")
-    
+
     do {
       twitterAccessToken = try managedContext.fetch(fetchRequest).first as? TwitterAccessToken
+      print("We have token presaved: " + (twitterAccessToken?.access_token)!)
     } catch let error as NSError {
       print("Could not fetch. \(error), \(error.userInfo)")
     }
@@ -86,5 +87,30 @@ class AccessTokenModel {
         print("Could not save. \(error), \(error.userInfo)")
       }
     }
+  }
+
+  func logoutTwitter() {
+    DispatchQueue.main.async {
+      guard let appDelegate =
+        UIApplication.shared.delegate as? AppDelegate
+      else {
+        return
+      }
+
+      let managedContext =
+        appDelegate.persistentContainer.viewContext
+
+      let fetchRequest =
+        NSFetchRequest<NSFetchRequestResult>(entityName: "TwitterAccessToken")
+
+      let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
+
+      do {
+        try managedContext.execute(deleteRequest)
+      } catch let error as NSError {
+        print("Could not delete. \(error), \(error.userInfo)")
+      }
+    }
+    twitterAccessToken = nil
   }
 }
