@@ -34,7 +34,20 @@ class AccessTokenModel {
   }
 
   func isLoggedIn() -> Bool {
-    return twitterAccessToken != nil
+    if twitterAccessToken == nil {
+      return false
+    }
+    if twitterAccessToken?.access_token == nil {
+      return false
+    }
+    if twitterAccessToken?.expiry_date == nil {
+      return false
+    }
+    let now = Date()
+    if now > (twitterAccessToken?.expiry_date)! {
+      return false
+    }
+    return true
   }
 
   func setTwitterAccessToken(json: [String: Any]) {
@@ -48,6 +61,7 @@ class AccessTokenModel {
       let access_token = json["access_token"] as? String
       let token_type = json["token_type"] as? String
       let expires_in = json["expires_in"] as? Int
+      let expiry_date = Date(timeIntervalSinceNow: TimeInterval(expires_in!))
       let scope = json["scope"] as? String
 
       let managedContext =
@@ -62,6 +76,7 @@ class AccessTokenModel {
 
       token.setValue(access_token, forKeyPath: "access_token")
       token.setValue(token_type, forKeyPath: "token_type")
+      token.setValue(expiry_date, forKeyPath: "expiry_date")
       token.setValue(expires_in, forKeyPath: "expires_in")
       token.setValue(scope, forKeyPath: "scope")
 
