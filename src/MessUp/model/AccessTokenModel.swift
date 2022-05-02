@@ -8,7 +8,8 @@
 import Foundation
 
 class AccessTokenModel: Codable {
-  var linkedinAccessToken : LinkedInAccessToken? = nil
+  var twitterAccessToken : TwitterAccessToken? = nil
+  
 
   // singleton
   static let shared = AccessTokenModel()
@@ -16,11 +17,12 @@ class AccessTokenModel: Codable {
   init() {
   }
 
-  func getLinkedInAccessToken() -> LinkedInAccessToken? {
-    return linkedinAccessToken
+  func getTwitterAccessToken() -> TwitterAccessToken? {
+    return twitterAccessToken
   }
 
-  func setLinkedInAccessToken(linkedinAccessToken: LinkedInAccessToken) {
-    self.linkedinAccessToken = linkedinAccessToken
+  func setTwitterAccessToken(twitterAccessToken: TwitterAccessToken) {
+    self.twitterAccessToken = twitterAccessToken
+    // attempt to save token
   }
 }

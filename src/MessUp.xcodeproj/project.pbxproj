@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		500638E0281F730200ADB977 /* TwitterAccessToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500638DF281F730200ADB977 /* TwitterAccessToken.swift */; };
+		500638E2281F73A700ADB977 /* TwitterLoginWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500638E1281F73A700ADB977 /* TwitterLoginWebViewController.swift */; };
+		500638E4281F76B500ADB977 /* TwitterCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500638E3281F76B500ADB977 /* TwitterCredentials.swift */; };
 		501CC4822817861C00462760 /* LinkedInCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501CC4812817861C00462760 /* LinkedInCredentials.swift */; };
-		5020AD0A2814DCE300C7C6B0 /* LinkedInEmailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5020AD092814DCE300C7C6B0 /* LinkedInEmailModel.swift */; };
-		5020AD0C2814DD0300C7C6B0 /* LinkedInProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5020AD0B2814DD0300C7C6B0 /* LinkedInProfileModel.swift */; };
 		5020AD0E2814DD5500C7C6B0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5020AD0D2814DD5500C7C6B0 /* LoginViewController.swift */; };
 		504E04F42814D83800E3C06C /* LinkedInCredentialsExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504E04F32814D83800E3C06C /* LinkedInCredentialsExample.swift */; };
 		5099290C2810EAC80035E1AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5099290B2810EAC80035E1AF /* AppDelegate.swift */; };
@@ -20,8 +21,6 @@
 		509929232810EACA0035E1AF /* MessUpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509929222810EACA0035E1AF /* MessUpTests.swift */; };
 		5099292D2810EACA0035E1AF /* MessUpUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5099292C2810EACA0035E1AF /* MessUpUITests.swift */; };
 		5099292F2810EACA0035E1AF /* MessUpUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5099292E2810EACA0035E1AF /* MessUpUITestsLaunchTests.swift */; };
-		50BD520328160ACE0099D0DD /* LinkedInLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BD520228160ACE0099D0DD /* LinkedInLoginViewController.swift */; };
-		50BD520528161FCF0099D0DD /* LinkedInAccessToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BD520428161FCF0099D0DD /* LinkedInAccessToken.swift */; };
 		50BD5207281629B90099D0DD /* AccessTokenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BD5206281629B90099D0DD /* AccessTokenModel.swift */; };
 		50F13433281F492A00702224 /* ContactsMatchingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F13432281F492A00702224 /* ContactsMatchingViewController.swift */; };
 /* End PBXBuildFile section */
@@ -44,9 +43,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		500638DF281F730200ADB977 /* TwitterAccessToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterAccessToken.swift; sourceTree = "<group>"; };
+		500638E1281F73A700ADB977 /* TwitterLoginWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterLoginWebViewController.swift; sourceTree = "<group>"; };
+		500638E3281F76B500ADB977 /* TwitterCredentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterCredentials.swift; sourceTree = "<group>"; };
 		501CC4812817861C00462760 /* LinkedInCredentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedInCredentials.swift; sourceTree = "<group>"; };
-		5020AD092814DCE300C7C6B0 /* LinkedInEmailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedInEmailModel.swift; sourceTree = "<group>"; };
-		5020AD0B2814DD0300C7C6B0 /* LinkedInProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedInProfileModel.swift; sourceTree = "<group>"; };
 		5020AD0D2814DD5500C7C6B0 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		504E04F32814D83800E3C06C /* LinkedInCredentialsExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedInCredentialsExample.swift; sourceTree = "<group>"; };
 		509929082810EAC80035E1AF /* MessUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MessUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -61,8 +61,6 @@
 		509929282810EACA0035E1AF /* MessUpUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MessUpUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5099292C2810EACA0035E1AF /* MessUpUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessUpUITests.swift; sourceTree = "<group>"; };
 		5099292E2810EACA0035E1AF /* MessUpUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessUpUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		50BD520228160ACE0099D0DD /* LinkedInLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedInLoginViewController.swift; sourceTree = "<group>"; };
-		50BD520428161FCF0099D0DD /* LinkedInAccessToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedInAccessToken.swift; sourceTree = "<group>"; };
 		50BD5206281629B90099D0DD /* AccessTokenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessTokenModel.swift; sourceTree = "<group>"; };
 		50F13432281F492A00702224 /* ContactsMatchingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsMatchingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -97,6 +95,7 @@
 			children = (
 				504E04F32814D83800E3C06C /* LinkedInCredentialsExample.swift */,
 				501CC4812817861C00462760 /* LinkedInCredentials.swift */,
+				500638E3281F76B500ADB977 /* TwitterCredentials.swift */,
 			);
 			path = env;
 			sourceTree = "<group>";
@@ -113,9 +112,9 @@
 		5020AD072814DB4C00C7C6B0 /* controller */ = {
 			isa = PBXGroup;
 			children = (
-				50BD520228160ACE0099D0DD /* LinkedInLoginViewController.swift */,
 				50F13432281F492A00702224 /* ContactsMatchingViewController.swift */,
 				5020AD0D2814DD5500C7C6B0 /* LoginViewController.swift */,
+				500638E1281F73A700ADB977 /* TwitterLoginWebViewController.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -133,9 +132,7 @@
 		504E04F22814D81F00E3C06C /* model */ = {
 			isa = PBXGroup;
 			children = (
-				5020AD092814DCE300C7C6B0 /* LinkedInEmailModel.swift */,
-				5020AD0B2814DD0300C7C6B0 /* LinkedInProfileModel.swift */,
-				50BD520428161FCF0099D0DD /* LinkedInAccessToken.swift */,
+				500638DF281F730200ADB977 /* TwitterAccessToken.swift */,
 				50BD5206281629B90099D0DD /* AccessTokenModel.swift */,
 			);
 			path = model;
@@ -324,17 +321,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				500638E4281F76B500ADB977 /* TwitterCredentials.swift in Sources */,
 				50F13433281F492A00702224 /* ContactsMatchingViewController.swift in Sources */,
-				50BD520328160ACE0099D0DD /* LinkedInLoginViewController.swift in Sources */,
+				500638E0281F730200ADB977 /* TwitterAccessToken.swift in Sources */,
 				5020AD0E2814DD5500C7C6B0 /* LoginViewController.swift in Sources */,
-				5020AD0A2814DCE300C7C6B0 /* LinkedInEmailModel.swift in Sources */,
+				500638E2281F73A700ADB977 /* TwitterLoginWebViewController.swift in Sources */,
 				504E04F42814D83800E3C06C /* LinkedInCredentialsExample.swift in Sources */,
 				501CC4822817861C00462760 /* LinkedInCredentials.swift in Sources */,
 				5099290C2810EAC80035E1AF /* AppDelegate.swift in Sources */,
-				50BD520528161FCF0099D0DD /* LinkedInAccessToken.swift in Sources */,
 				5099290E2810EAC80035E1AF /* SceneDelegate.swift in Sources */,
 				50BD5207281629B90099D0DD /* AccessTokenModel.swift in Sources */,
-				5020AD0C2814DD0300C7C6B0 /* LinkedInProfileModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

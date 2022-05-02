@@ -19,14 +19,10 @@ class LoginViewController: UIViewController {
 
   private let model = AccessTokenModel.shared
 
-  @IBOutlet var tokenLabel: UILabel!
-
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    if let vc = segue.destination as? LinkedInLoginViewController {
+    if let vc = segue.destination as? TwitterLoginWebViewController {
       vc.onAccessTokenAcquired = {
         DispatchQueue.main.async {
-          // self.tokenLabel.text = "Access Token: " + (self.model.getLinkedInAccessToken()?.accessToken ?? "Not Provided")
-          self.LinkedInLoginButton.isHidden = true
           let controller = self.storyboard?.instantiateViewController(withIdentifier: "MessUpTabBarController") as! UITabBarController
           controller.modalPresentationStyle = .fullScreen
           self.present(controller, animated: true, completion: nil)
