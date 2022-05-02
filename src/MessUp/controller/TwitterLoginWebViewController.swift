@@ -20,7 +20,13 @@ class TwitterLoginWebViewController: UIViewController, WKNavigationDelegate {
   override func viewDidLoad() {
     super.viewDidLoad()
     TwitterLoginView.navigationDelegate = self
+
+    if model.getTwitterAccessToken() != nil {
+      onAccessTokenAcquired?()
+    } else {
     getRequestToken()
+    }
+
   }
 
   private func getRequestToken() {
@@ -84,8 +90,10 @@ class TwitterLoginWebViewController: UIViewController, WKNavigationDelegate {
         if let data = data {
           do {
             print("data loaded!: \(String(data: data, encoding: .utf8)!)")
-            let accessToken = try JSONDecoder().decode(TwitterAccessToken.self, from: data)
-            self.model.setTwitterAccessToken(twitterAccessToken: accessToken)
+
+            let json = try JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
+
+            self.model.setTwitterAccessToken(json: json)
             self.onAccessTokenAcquired?()
           } catch {
             print("requestAccessToken Error: \(error)")

@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		500638E0281F730200ADB977 /* TwitterAccessToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500638DF281F730200ADB977 /* TwitterAccessToken.swift */; };
 		500638E2281F73A700ADB977 /* TwitterLoginWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500638E1281F73A700ADB977 /* TwitterLoginWebViewController.swift */; };
 		500638E4281F76B500ADB977 /* TwitterCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500638E3281F76B500ADB977 /* TwitterCredentials.swift */; };
+		500638E7281FA1A400ADB977 /* MessUpDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 500638E5281FA1A400ADB977 /* MessUpDataModel.xcdatamodeld */; };
 		501CC4822817861C00462760 /* LinkedInCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501CC4812817861C00462760 /* LinkedInCredentials.swift */; };
 		5020AD0E2814DD5500C7C6B0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5020AD0D2814DD5500C7C6B0 /* LoginViewController.swift */; };
 		504E04F42814D83800E3C06C /* LinkedInCredentialsExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504E04F32814D83800E3C06C /* LinkedInCredentialsExample.swift */; };
@@ -43,9 +43,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		500638DF281F730200ADB977 /* TwitterAccessToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterAccessToken.swift; sourceTree = "<group>"; };
 		500638E1281F73A700ADB977 /* TwitterLoginWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterLoginWebViewController.swift; sourceTree = "<group>"; };
 		500638E3281F76B500ADB977 /* TwitterCredentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterCredentials.swift; sourceTree = "<group>"; };
+		500638E6281FA1A400ADB977 /* PersistentStorage.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PersistentStorage.xcdatamodel; sourceTree = "<group>"; };
 		501CC4812817861C00462760 /* LinkedInCredentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedInCredentials.swift; sourceTree = "<group>"; };
 		5020AD0D2814DD5500C7C6B0 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		504E04F32814D83800E3C06C /* LinkedInCredentialsExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedInCredentialsExample.swift; sourceTree = "<group>"; };
@@ -132,7 +132,6 @@
 		504E04F22814D81F00E3C06C /* model */ = {
 			isa = PBXGroup;
 			children = (
-				500638DF281F730200ADB977 /* TwitterAccessToken.swift */,
 				50BD5206281629B90099D0DD /* AccessTokenModel.swift */,
 			);
 			path = model;
@@ -141,6 +140,7 @@
 		509928FF2810EAC80035E1AF = {
 			isa = PBXGroup;
 			children = (
+				500638E5281FA1A400ADB977 /* MessUpDataModel.xcdatamodeld */,
 				5099290A2810EAC80035E1AF /* MessUp */,
 				509929212810EACA0035E1AF /* MessUpTests */,
 				5099292B2810EACA0035E1AF /* MessUpUITests */,
@@ -323,7 +323,7 @@
 			files = (
 				500638E4281F76B500ADB977 /* TwitterCredentials.swift in Sources */,
 				50F13433281F492A00702224 /* ContactsMatchingViewController.swift in Sources */,
-				500638E0281F730200ADB977 /* TwitterAccessToken.swift in Sources */,
+				500638E7281FA1A400ADB977 /* MessUpDataModel.xcdatamodeld in Sources */,
 				5020AD0E2814DD5500C7C6B0 /* LoginViewController.swift in Sources */,
 				500638E2281F73A700ADB977 /* TwitterLoginWebViewController.swift in Sources */,
 				504E04F42814D83800E3C06C /* LinkedInCredentialsExample.swift in Sources */,
@@ -678,6 +678,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		500638E5281FA1A400ADB977 /* MessUpDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				500638E6281FA1A400ADB977 /* PersistentStorage.xcdatamodel */,
+			);
+			currentVersion = 500638E6281FA1A400ADB977 /* PersistentStorage.xcdatamodel */;
+			path = MessUpDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 509929002810EAC80035E1AF /* Project object */;
 }

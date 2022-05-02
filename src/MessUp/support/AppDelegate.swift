@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,7 +15,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     return true
   }
 
-  // MARK: UISceneSession Lifecycle
+  lazy var persistentContainer: NSPersistentContainer = {
+    let container = NSPersistentContainer(name: "MessUpDataModel")
+    container.loadPersistentStores { _, error in
+      if let error = error {
+        fatalError("Unable to load persistent stores: \(error)")
+      }
+    }
+    return container
+  }()
 
   func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
     // Called when a new scene session is being created.

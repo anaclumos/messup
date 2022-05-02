@@ -57,9 +57,8 @@
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="O8M-fI-fBv">
                                 <rect key="frame" x="0.0" y="44" width="414" height="798"/>
                             </activityIndicatorView>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oHW-zU-pU5">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oHW-zU-pU5">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                                 <items>
                                     <navigationItem title="Twitter Login" id="aXZ-UL-Ncv">
                                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="L4A-Pd-stQ">
@@ -71,7 +70,7 @@
                                 </items>
                             </navigationBar>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2tY-wR-yPO">
-                                <rect key="frame" x="0.0" y="44" width="414" height="798"/>
+                                <rect key="frame" x="0.0" y="56" width="414" height="786"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
@@ -83,13 +82,16 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="O8M-fI-fBv" firstAttribute="top" secondItem="TXJ-ZC-nLr" secondAttribute="top" id="43P-DX-WGH"/>
-                            <constraint firstItem="2tY-wR-yPO" firstAttribute="leading" secondItem="TXJ-ZC-nLr" secondAttribute="leading" id="82u-pT-KyH"/>
-                            <constraint firstItem="2tY-wR-yPO" firstAttribute="bottom" secondItem="TXJ-ZC-nLr" secondAttribute="bottom" id="AZN-rI-qdH"/>
                             <constraint firstItem="TXJ-ZC-nLr" firstAttribute="trailing" secondItem="O8M-fI-fBv" secondAttribute="trailing" id="ISz-Oq-gwR"/>
                             <constraint firstItem="O8M-fI-fBv" firstAttribute="leading" secondItem="TXJ-ZC-nLr" secondAttribute="leading" id="RyW-7a-8oG"/>
+                            <constraint firstItem="oHW-zU-pU5" firstAttribute="top" secondItem="tUm-HR-8DF" secondAttribute="top" id="SEh-A3-vaw"/>
+                            <constraint firstAttribute="trailing" secondItem="oHW-zU-pU5" secondAttribute="trailing" id="XXd-Kx-P6E"/>
+                            <constraint firstItem="2tY-wR-yPO" firstAttribute="top" secondItem="oHW-zU-pU5" secondAttribute="bottom" id="bG0-5l-zQE"/>
+                            <constraint firstItem="2tY-wR-yPO" firstAttribute="bottom" secondItem="TXJ-ZC-nLr" secondAttribute="bottom" id="ib2-IG-w9R"/>
                             <constraint firstItem="TXJ-ZC-nLr" firstAttribute="bottom" secondItem="O8M-fI-fBv" secondAttribute="bottom" id="jAA-Eq-3Qe"/>
-                            <constraint firstItem="2tY-wR-yPO" firstAttribute="trailing" secondItem="TXJ-ZC-nLr" secondAttribute="trailing" id="pFA-25-tEh"/>
-                            <constraint firstItem="2tY-wR-yPO" firstAttribute="top" secondItem="TXJ-ZC-nLr" secondAttribute="top" id="z2s-9a-MGu"/>
+                            <constraint firstItem="oHW-zU-pU5" firstAttribute="leading" secondItem="tUm-HR-8DF" secondAttribute="leading" id="rE4-s8-9ce"/>
+                            <constraint firstItem="2tY-wR-yPO" firstAttribute="leading" secondItem="TXJ-ZC-nLr" secondAttribute="leading" id="ta4-fx-HJT"/>
+                            <constraint firstItem="2tY-wR-yPO" firstAttribute="trailing" secondItem="TXJ-ZC-nLr" secondAttribute="trailing" id="uhq-Rp-JAB"/>
                         </constraints>
                     </view>
                     <connections>
@@ -125,7 +127,7 @@
                             <outlet property="delegate" destination="zdW-fk-Vge" id="NOk-X6-9Se"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Contacts Matching" id="OEa-vV-lpo"/>
+                    <navigationItem key="navigationItem" title="Contacts Matching" largeTitleDisplayMode="always" id="OEa-vV-lpo"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L7B-OU-QwW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -154,7 +156,7 @@
                             <outlet property="delegate" destination="Ndo-tS-Fkv" id="T9a-oi-mU6"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="More" id="ygl-fb-jVy"/>
+                    <navigationItem key="navigationItem" title="More" largeTitleDisplayMode="always" id="ygl-fb-jVy"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KRz-YZ-ayh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

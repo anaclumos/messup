@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21E258" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="TwitterAccessToken">
+    <entity name="TwitterAccessToken" representedClassName="TwitterAccessToken" syncable="YES" codeGenerationType="class">
+        <attribute name="access_token" optional="YES" attributeType="String"/>
+        <attribute name="expires_in" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="scope" optional="YES" attributeType="String"/>
+        <attribute name="token_type" optional="YES" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="TwitterAccessToken" positionX="-63" positionY="-18" width="128" height="89"/>
+    </elements>
+</model>
