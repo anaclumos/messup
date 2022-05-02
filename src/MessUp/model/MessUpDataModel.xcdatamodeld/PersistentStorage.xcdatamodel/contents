@@ -8,6 +8,6 @@
         <attribute name="token_type" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="TwitterAccessToken" positionX="-63" positionY="-18" width="128" height="118"/>
+        <element name="TwitterAccessToken" positionX="-63" positionY="-18" width="128" height="104"/>
     </elements>
 </model>
