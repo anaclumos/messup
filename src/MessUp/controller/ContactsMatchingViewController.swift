@@ -24,8 +24,9 @@ class ContactsMatchingViewController: UITableViewController {
   @IBOutlet var usernameButton: UIBarButtonItem!
 
   override func viewDidLoad() {
-    username = model.getMyUsername()
     super.viewDidLoad()
+    username = model.getMyUsername()
+
     if username != "" {
       usernameButton.title = username
     } else {
@@ -38,7 +39,7 @@ class ContactsMatchingViewController: UITableViewController {
     refresh()
   }
 
-  func refresh() {
+  @objc func refresh() {
     if !isValid(username: username) {
       return
     }
@@ -165,11 +166,16 @@ class ContactsMatchingViewController: UITableViewController {
 
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     if segue.identifier == "loadProfile" {
-      print("loadProfile")
       let destination = segue.destination as! ContactSettingViewController
       let index = tableView.indexPathForSelectedRow!.row
       destination.imageUrl = contactsModel.get(index: index).getProfileImageUrl()
       destination.username = contactsModel.get(index: index).getUsername()
+      destination.name = contactsModel.get(index: index).getName()
+      destination.onComplete = {
+        if let indexPath = self.tableView.indexPathForSelectedRow {
+          self.tableView.deselectRow(at: indexPath, animated: true)
+        }
+      }
     }
   }
 }
