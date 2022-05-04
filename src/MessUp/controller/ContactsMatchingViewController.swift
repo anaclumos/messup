@@ -5,8 +5,6 @@
 //  Created by Sunghyun Cho on 5/1/22.
 //
 
-// TODO: ^[A-Za-z0-9_]{1,15}$ 검사하기 (fetch 직전)
-
 import CoreData
 import Foundation
 import Kingfisher
@@ -22,14 +20,11 @@ class ContactsMatchingViewController: UITableViewController {
   private let twitterApiManager = TwitterApiManager.shared
   private let model = AccessTokenModel.shared
   private let contactsModel = ContactsModel.shared
-  let activityIndicator = UIActivityIndicatorView(style: .medium)
   var username: String = ""
   @IBOutlet var usernameButton: UIBarButtonItem!
 
   override func viewDidLoad() {
     username = model.getMyUsername()
-    activityIndicator.isHidden = true
-    activityIndicator.center = view.center
     super.viewDidLoad()
     if username != "" {
       usernameButton.title = username
@@ -44,11 +39,12 @@ class ContactsMatchingViewController: UITableViewController {
   }
 
   func refresh() {
-    activityIndicator.isHidden = false
-    activityIndicator.startAnimating()
-    view.addSubview(activityIndicator)
+    if !isValid(username: username) {
+      return
+    }
 
     twitterApiManager.getMyTwitterData { response in
+
       guard let data = response["data"] as? [String: Any] else {
         self.promptError(error: "Could not get data from response")
         return
@@ -89,15 +85,17 @@ class ContactsMatchingViewController: UITableViewController {
         self.contactsModel.set(contacts: contacts)
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
           self.tableView.reloadData()
-          self.activityIndicator.stopAnimating()
-          self.activityIndicator.isHidden = true
         }
       }
     }
   }
 
   @IBAction func usernameButtonDidTapped(_ sender: Any) {
-    let alert = UIAlertController(title: "Enter your Twitter Username", message: nil, preferredStyle: .alert)
+    getUsernameInput(message: "Username must be alphanumeric between 1 and 15 characters")
+  }
+
+  func getUsernameInput(message: String) {
+    let alert = UIAlertController(title: "Enter your Twitter Username", message: message, preferredStyle: .alert)
     alert.addTextField { textField in
       if self.username != "" {
         textField.text = self.username
@@ -106,27 +104,19 @@ class ContactsMatchingViewController: UITableViewController {
       }
     }
     alert.addAction(UIAlertAction(title: "OK", style: .default, handler: {
-
       _ in
 
-      if let username = alert.textFields?.first?.text {
-        if username.count > 15 || username.count < 1 {
-          self.promptError(error: "Username must be 1-15 characters")
-          return
+      if self.isValid(username: alert.textFields![0].text!) {
+        self.username = alert.textFields![0].text ?? ""
+        self.model.setMyUsername(username: self.username)
+        if self.username != "" {
+          self.usernameButton.title = self.username
+        } else {
+          self.usernameButton.title = "Username"
         }
-        if username.range(of: "^[A-Za-z0-9_]{1,15}$", options: .regularExpression) == nil {
-          self.promptError(error: "Username must be alphanumeric")
-          return
-        }
-      }
 
-
-      self.username = alert.textFields![0].text ?? ""
-      self.model.setMyUsername(username: self.username)
-      if self.username != "" {
-        self.usernameButton.title = self.username
       } else {
-        self.usernameButton.title = "Username"
+        self.promptError(error: "Invalid username")
       }
 
       DispatchQueue.main.async {
@@ -156,10 +146,20 @@ class ContactsMatchingViewController: UITableViewController {
   }
 
   func promptError(error: String) {
-    activityIndicator.isHidden = true
-    activityIndicator.stopAnimating()
     let alert = UIAlertController(title: "Error", message: error, preferredStyle: .alert)
     alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
     present(alert, animated: true, completion: nil)
+  }
+
+  func isValid(username: String) -> Bool {
+    if username.count > 15 || username.count < 1 {
+      getUsernameInput(message: "Username must be alphanumeric between 1 and 15 characters")
+      return false
+    }
+    if username.range(of: "^[A-Za-z0-9_]{1,15}$", options: .regularExpression) == nil {
+      getUsernameInput(message: "Username must be alphanumeric between 1 and 15 characters")
+      return false
+    }
+    return true
   }
 }
