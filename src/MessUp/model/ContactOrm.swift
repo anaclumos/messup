@@ -5,14 +5,8 @@
 //  Created by Sunghyun Cho on 5/3/22.
 //
 
+import Amplitude
 import Foundation
-
-// {
-//     id = 2748947849;
-//     name = "Zhiyu (Apollo) Zhu \Ud83d\Udcad";
-//     "profile_image_url" = "https://pbs.twimg.com/profile_images/1477496658325741572/VTUnNdkK_normal.jpg";
-//     username = "zhuzhiyu_";
-// }
 
 class ContactOrm {
     var id: String

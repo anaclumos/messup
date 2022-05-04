@@ -5,6 +5,7 @@
 //  Created by Sunghyun Cho on 5/3/22.
 //
 
+import Amplitude
 import Foundation
 
 class ContactsModel {

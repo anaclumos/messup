@@ -5,13 +5,22 @@
 //  Created by Sunghyun Cho on 4/20/22.
 //
 
+import Amplitude
 import UIKit
 import CoreData
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-    // Override point for customization after application launch.
+    // Enable sending automatic session events
+    Amplitude.instance().trackingSessionEvents = true
+    // Initialize SDK
+    Amplitude.instance().initializeApiKey("b9cf3af08fa8c103b9582f1fccecf55e")
+    // Set userId
+    Amplitude.instance().setUserId("userId")
+    // Log an event
+    Amplitude.instance().logEvent("app_start")
+    
     return true
   }
 

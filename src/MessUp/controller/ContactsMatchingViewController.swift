@@ -5,6 +5,7 @@
 //  Created by Sunghyun Cho on 5/1/22.
 //
 
+import Amplitude
 import CoreData
 import Foundation
 import Kingfisher
@@ -36,6 +37,7 @@ class ContactsMatchingViewController: UITableViewController {
   }
 
   @IBAction func refreshButtonDidTapped(_ sender: Any) {
+    Amplitude.instance().logEvent("Refresh Button Did Tapped")
     refresh()
   }
 
@@ -92,6 +94,7 @@ class ContactsMatchingViewController: UITableViewController {
   }
 
   @IBAction func usernameButtonDidTapped(_ sender: Any) {
+    Amplitude.instance().logEvent("Username Button Did Tapped")
     getUsernameInput(message: "Username must be alphanumeric between 1 and 15 characters")
   }
 
@@ -106,7 +109,7 @@ class ContactsMatchingViewController: UITableViewController {
     }
     alert.addAction(UIAlertAction(title: "OK", style: .default, handler: {
       _ in
-
+      Amplitude.instance().logEvent("Alert Dismissed")
       if self.isValid(username: alert.textFields![0].text!) {
         self.username = alert.textFields![0].text ?? ""
         self.model.setMyUsername(username: self.username)
@@ -147,6 +150,7 @@ class ContactsMatchingViewController: UITableViewController {
   }
 
   func promptError(error: String) {
+    Amplitude.instance().logEvent("Error: \(error)")
     let alert = UIAlertController(title: "Error", message: error, preferredStyle: .alert)
     alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
     present(alert, animated: true, completion: nil)

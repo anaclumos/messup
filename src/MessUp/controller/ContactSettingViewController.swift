@@ -5,6 +5,7 @@
 //  Created by Sunghyun Cho on 5/3/22.
 //
 
+import Amplitude
 import Contacts
 import ContactsUI
 import Foundation
@@ -19,6 +20,7 @@ class ContactSettingViewController: UIViewController, CNContactPickerDelegate, C
   var onComplete: (() -> Void)?
 
   @IBAction func cancelButtonDidTapped(_ sender: Any) {
+    Amplitude.instance().logEvent("Cancel Button Did Tapped")
     dismiss(animated: true, completion: nil)
     onComplete?()
   }
@@ -48,6 +50,7 @@ class ContactSettingViewController: UIViewController, CNContactPickerDelegate, C
   }
 
   @IBAction func visitTwitterButtonDidTapped(_ sender: Any) {
+    Amplitude.instance().logEvent("Visit Twitter Button Did Tapped")
     if username == nil {
       return
     }
@@ -58,6 +61,7 @@ class ContactSettingViewController: UIViewController, CNContactPickerDelegate, C
   }
 
   @IBAction func setToContactsButtonDidTapped(_ sender: Any) {
+    Amplitude.instance().logEvent("Set to Contacts Button Did Tapped")
     let store = CNContactStore()
     store.requestAccess(for: .contacts) { granted, _ in
       if granted {
@@ -70,6 +74,8 @@ class ContactSettingViewController: UIViewController, CNContactPickerDelegate, C
 
   func updateContacts(image: UIImage) {
     DispatchQueue.main.async {
+      Amplitude.instance().logEvent("Updated Contacts")
+      
       // Create a new contact
       let contact = CNMutableContact()
 
@@ -98,6 +104,7 @@ class ContactSettingViewController: UIViewController, CNContactPickerDelegate, C
   }
 
   func promptError(error: String) {
+    Amplitude.instance().logEvent("Error: \(error)")
     let alert = UIAlertController(title: "Error", message: error, preferredStyle: .alert)
     alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
     present(alert, animated: true, completion: nil)

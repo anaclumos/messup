@@ -5,6 +5,7 @@
 //  Created by Sunghyun Cho on 4/24/22.
 //
 
+import Amplitude
 import CoreData
 import Foundation
 import UIKit

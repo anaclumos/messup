@@ -28,6 +28,7 @@
 		509D5D2B28220DF90014938F /* ContactsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509D5D2A28220DF90014938F /* ContactsModel.swift */; };
 		509D5D2E282214840014938F /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 509D5D2D282214840014938F /* Kingfisher */; };
 		509D5D3028222F2B0014938F /* ContactSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509D5D2F28222F2B0014938F /* ContactSettingViewController.swift */; };
+		509D5D33282332E60014938F /* Amplitude in Frameworks */ = {isa = PBXBuildFile; productRef = 509D5D32282332E60014938F /* Amplitude */; };
 		50BD5207281629B90099D0DD /* AccessTokenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BD5206281629B90099D0DD /* AccessTokenModel.swift */; };
 		50F13433281F492A00702224 /* ContactsMatchingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F13432281F492A00702224 /* ContactsMatchingViewController.swift */; };
 /* End PBXBuildFile section */
@@ -83,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				509D5D33282332E60014938F /* Amplitude in Frameworks */,
 				509D5D2E282214840014938F /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -228,6 +230,7 @@
 			name = MessUp;
 			packageProductDependencies = (
 				509D5D2D282214840014938F /* Kingfisher */,
+				509D5D32282332E60014938F /* Amplitude */,
 			);
 			productName = MessUp;
 			productReference = 509929082810EAC80035E1AF /* MessUp.app */;
@@ -303,6 +306,7 @@
 			mainGroup = 509928FF2810EAC80035E1AF;
 			packageReferences = (
 				509D5D2C282214840014938F /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				509D5D31282332E60014938F /* XCRemoteSwiftPackageReference "Amplitude-iOS" */,
 			);
 			productRefGroup = 509929092810EAC80035E1AF /* Products */;
 			projectDirPath = "";
@@ -720,6 +724,14 @@
 				kind = branch;
 			};
 		};
+		509D5D31282332E60014938F /* XCRemoteSwiftPackageReference "Amplitude-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/amplitude/Amplitude-iOS.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -727,6 +739,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 509D5D2C282214840014938F /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		509D5D32282332E60014938F /* Amplitude */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 509D5D31282332E60014938F /* XCRemoteSwiftPackageReference "Amplitude-iOS" */;
+			productName = Amplitude;
 		};
 /* End XCSwiftPackageProductDependency section */
 

@@ -5,6 +5,7 @@
 //  Created by Sunghyun Cho on 4/23/22.
 //
 
+import Amplitude
 import Foundation
 
 import UIKit
@@ -27,6 +28,7 @@ class LoginViewController: UIViewController {
   }
 
   @IBAction func twitterLoginButton(_ sender: Any) {
+    Amplitude.instance().logEvent("Twitter Login Button Did Tapped")
     print("twitterLoginButton Pressed")
   }
 

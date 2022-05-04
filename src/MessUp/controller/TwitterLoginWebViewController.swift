@@ -5,6 +5,7 @@
 //  Created by Sunghyun Cho on 5/1/22.
 //
 
+import Amplitude
 import Foundation
 import WebKit
 
@@ -14,6 +15,7 @@ class TwitterLoginWebViewController: UIViewController, WKNavigationDelegate {
   @IBOutlet var spinner: UIActivityIndicatorView!
   @IBOutlet var TwitterLoginView: WKWebView!
   @IBAction func cancelButtonDidPress(_ sender: Any) {
+    Amplitude.instance().logEvent("Twitter Login Canceled")
     dismiss(animated: true, completion: nil)
   }
 
@@ -34,6 +36,7 @@ class TwitterLoginWebViewController: UIViewController, WKNavigationDelegate {
         let accessToken = self.model.getTwitterAccessToken()!
         let alert = UIAlertController(title: "AccessToken already exists in CoreData", message: "Token: \(String(describing: accessToken))", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in
+          Amplitude.instance().logEvent("Twitter Logged In")
           self.dismiss(animated: true, completion: nil)
           let controller = self.storyboard?.instantiateViewController(withIdentifier: "MessUpTabBarController") as! UITabBarController
           controller.modalPresentationStyle = .fullScreen
@@ -66,6 +69,7 @@ class TwitterLoginWebViewController: UIViewController, WKNavigationDelegate {
   }
 
   func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
+    Amplitude.instance().logEvent("Webview Opened: \(String(describing: webView.url))")
     print("webView:decidePolicyFor: \(navigationAction)")
     // print current URL
     print("current URL: \(String(describing: webView.url))")

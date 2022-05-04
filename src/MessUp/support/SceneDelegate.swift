@@ -5,6 +5,7 @@
 //  Created by Sunghyun Cho on 4/20/22.
 //
 
+import Amplitude
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
