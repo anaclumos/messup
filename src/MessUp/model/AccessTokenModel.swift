@@ -15,13 +15,17 @@ class AccessTokenModel {
   static let shared = AccessTokenModel()
 
   init() {
+    refresh()
+  }
+
+  func refresh() {
+    // fetch from core data
     guard let appDelegate = UIApplication.shared.delegate as? AppDelegate
     else {
       return
     }
     let managedContext = appDelegate.persistentContainer.viewContext
     let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "TwitterAccessToken")
-
     do {
       twitterAccessToken = try managedContext.fetch(fetchRequest).first as? TwitterAccessToken
     } catch let error as NSError {
@@ -37,18 +41,28 @@ class AccessTokenModel {
     return twitterAccessToken?.my_username ?? ""
   }
 
-  func setMyUsername (username: String) {
-    twitterAccessToken?.my_username = username
+  func setMyUsername(username: String) {
+    refresh()
+    print("trying to save \(username)")
+    if twitterAccessToken == nil {
+      print("twitterAccessToken is nil")
+      return
+    }
+    twitterAccessToken!.my_username = username
     guard let appDelegate = UIApplication.shared.delegate as? AppDelegate
     else {
+      print("no appDelegate")
       return
     }
     let managedContext = appDelegate.persistentContainer.viewContext
     do {
+      // save twitterAccessToken to CoreData
       try managedContext.save()
+      print("saved")
     } catch let error as NSError {
       print("Could not save. \(error), \(error.userInfo)")
     }
+    print("saved username. username is now \(String(describing: twitterAccessToken?.my_username))")
   }
 
   func isLoggedIn() -> Bool {
@@ -96,7 +110,8 @@ class AccessTokenModel {
       token.setValue(expiry_date, forKeyPath: "expiry_date")
       token.setValue(expires_in, forKeyPath: "expires_in")
       token.setValue(scope, forKeyPath: "scope")
-
+      token.setValue("", forKeyPath: "my_username")
+      print(token)
       do {
         try managedContext.save()
       } catch let error as NSError {

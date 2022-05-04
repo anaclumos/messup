@@ -5,7 +5,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
-        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -167,58 +166,93 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="420-nM-Ab3" kind="relationship" relationship="rootViewController" id="xVv-n1-HSs"/>
+                        <segue destination="NO3-pV-UpC" kind="relationship" relationship="rootViewController" id="qj2-rH-r0g"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oHv-SY-Dd9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2116" y="876"/>
         </scene>
-        <!--Profile Matching-->
-        <scene sceneID="0rC-c1-Y8q">
+        <!--Contacts Matching-->
+        <scene sceneID="wan-OG-aYG">
             <objects>
-                <collectionViewController id="420-nM-Ab3" customClass="ContactsMatchingViewController" customModule="MessUp" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="43z-qA-ydD">
+                <tableViewController id="NO3-pV-UpC" customClass="ContactsMatchingViewController" customModule="MessUp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="Y1g-DY-cd7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="CG3-Y8-jFK">
-                            <size key="itemSize" width="128" height="128"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        </collectionViewFlowLayout>
-                        <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TwitterProfileImageCell" id="Qw6-Zq-8ng">
-                                <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="zei-X2-uj2">
-                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ContactsMatchingTableViewCell" rowHeight="124" id="4dp-Fv-il0" customClass="ContactsMatchingTableViewCell" customModule="MessUp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="124"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4dp-Fv-il0" id="6j7-u8-sCF">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="124"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                </collectionViewCellContentView>
-                            </collectionViewCell>
-                        </cells>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ptD-gt-zWW">
+                                            <rect key="frame" x="314" y="11" width="80" height="102"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="ptD-gt-zWW" secondAttribute="height" multiplier="1:1" id="467-Af-tmc"/>
+                                                <constraint firstAttribute="width" constant="80" id="t11-pp-DDE"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Xs-gR-MP0">
+                                            <rect key="frame" x="20" y="21" width="284" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="puo-Ep-bKy">
+                                            <rect key="frame" x="20" y="82" width="284" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="6Xs-gR-MP0" firstAttribute="top" secondItem="6j7-u8-sCF" secondAttribute="topMargin" constant="10" id="4nc-DO-C93"/>
+                                        <constraint firstItem="ptD-gt-zWW" firstAttribute="top" secondItem="6j7-u8-sCF" secondAttribute="topMargin" id="6US-bz-acS"/>
+                                        <constraint firstItem="puo-Ep-bKy" firstAttribute="leading" secondItem="6j7-u8-sCF" secondAttribute="leadingMargin" id="EC9-t3-mXj"/>
+                                        <constraint firstItem="puo-Ep-bKy" firstAttribute="top" relation="greaterThanOrEqual" secondItem="6Xs-gR-MP0" secondAttribute="bottom" constant="10" id="Hlu-iS-eCZ"/>
+                                        <constraint firstItem="6Xs-gR-MP0" firstAttribute="leading" secondItem="6j7-u8-sCF" secondAttribute="leadingMargin" id="LtK-hW-P7K"/>
+                                        <constraint firstItem="ptD-gt-zWW" firstAttribute="leading" secondItem="6Xs-gR-MP0" secondAttribute="trailing" constant="10" id="O70-wM-jTb"/>
+                                        <constraint firstItem="ptD-gt-zWW" firstAttribute="trailing" secondItem="6j7-u8-sCF" secondAttribute="trailingMargin" id="Oxl-AW-arW"/>
+                                        <constraint firstItem="ptD-gt-zWW" firstAttribute="bottom" secondItem="6j7-u8-sCF" secondAttribute="bottomMargin" id="X8s-kq-6HK"/>
+                                        <constraint firstItem="ptD-gt-zWW" firstAttribute="leading" secondItem="puo-Ep-bKy" secondAttribute="trailing" constant="10" id="mkN-Sf-7ET"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="puo-Ep-bKy" secondAttribute="bottom" constant="10" id="vea-4N-rO0"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="nameLabel" destination="6Xs-gR-MP0" id="N76-qx-YxE"/>
+                                    <outlet property="profileImageView" destination="ptD-gt-zWW" id="NBd-xy-nFJ"/>
+                                    <outlet property="usernameLabel" destination="puo-Ep-bKy" id="7a9-6m-KsB"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="420-nM-Ab3" id="6r0-0N-Xv1"/>
-                            <outlet property="delegate" destination="420-nM-Ab3" id="w4S-D1-0HG"/>
+                            <outlet property="dataSource" destination="NO3-pV-UpC" id="p96-h8-Ldd"/>
+                            <outlet property="delegate" destination="NO3-pV-UpC" id="2Ts-b0-bfN"/>
                         </connections>
-                    </collectionView>
-                    <navigationItem key="navigationItem" title="Profile Matching" id="ruD-qZ-dAh">
-                        <barButtonItem key="leftBarButtonItem" title="Username" id="cl1-tv-kxO">
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Contacts Matching" id="hpb-hi-Osy">
+                        <barButtonItem key="leftBarButtonItem" title="Username" id="IjH-B7-FDN">
                             <connections>
-                                <action selector="usernameButtonDidTapped:" destination="420-nM-Ab3" id="Enl-n6-67a"/>
+                                <action selector="usernameButtonDidTapped:" destination="NO3-pV-UpC" id="gOX-rx-jM1"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Refresh" id="2Yh-zh-dEj">
+                        <barButtonItem key="rightBarButtonItem" title="Refresh" id="XuH-0e-94V">
                             <connections>
-                                <action selector="refreshButtonDidTapped:" destination="420-nM-Ab3" id="uUj-LK-5JZ"/>
+                                <action selector="refreshButtonDidTapped:" destination="NO3-pV-UpC" id="Hvm-jP-OqI"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                </collectionViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="AIa-44-MBI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                    <connections>
+                        <outlet property="usernameButton" destination="IjH-B7-FDN" id="YVN-yL-wQB"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O2i-Kf-EGm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3003" y="876"/>
+            <point key="canvasLocation" x="3121.739130434783" y="875.89285714285711"/>
         </scene>
         <!--Mess Up-->
         <scene sceneID="wb2-L4-JiK">

@@ -24,6 +24,9 @@
 		5099292D2810EACA0035E1AF /* MessUpUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5099292C2810EACA0035E1AF /* MessUpUITests.swift */; };
 		5099292F2810EACA0035E1AF /* MessUpUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5099292E2810EACA0035E1AF /* MessUpUITestsLaunchTests.swift */; };
 		509D5D272821FDE30014938F /* MyUserdata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509D5D262821FDE30014938F /* MyUserdata.swift */; };
+		509D5D2928220D490014938F /* ContactOrm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509D5D2828220D490014938F /* ContactOrm.swift */; };
+		509D5D2B28220DF90014938F /* ContactsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509D5D2A28220DF90014938F /* ContactsModel.swift */; };
+		509D5D2E282214840014938F /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 509D5D2D282214840014938F /* Kingfisher */; };
 		50BD5207281629B90099D0DD /* AccessTokenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BD5206281629B90099D0DD /* AccessTokenModel.swift */; };
 		50F13433281F492A00702224 /* ContactsMatchingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F13432281F492A00702224 /* ContactsMatchingViewController.swift */; };
 /* End PBXBuildFile section */
@@ -67,6 +70,8 @@
 		5099292C2810EACA0035E1AF /* MessUpUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessUpUITests.swift; sourceTree = "<group>"; };
 		5099292E2810EACA0035E1AF /* MessUpUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessUpUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		509D5D262821FDE30014938F /* MyUserdata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyUserdata.swift; sourceTree = "<group>"; };
+		509D5D2828220D490014938F /* ContactOrm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactOrm.swift; sourceTree = "<group>"; };
+		509D5D2A28220DF90014938F /* ContactsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsModel.swift; sourceTree = "<group>"; };
 		50BD5206281629B90099D0DD /* AccessTokenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessTokenModel.swift; sourceTree = "<group>"; };
 		50F13432281F492A00702224 /* ContactsMatchingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsMatchingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -76,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				509D5D2E282214840014938F /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,7 +147,9 @@
 			children = (
 				500638E5281FA1A400ADB977 /* MessUpDataModel.xcdatamodeld */,
 				50BD5206281629B90099D0DD /* AccessTokenModel.swift */,
+				509D5D2828220D490014938F /* ContactOrm.swift */,
 				509D5D262821FDE30014938F /* MyUserdata.swift */,
+				509D5D2A28220DF90014938F /* ContactsModel.swift */,
 				50280DBC281FC9B7003EE161 /* TwitterApiManager.swift */,
 			);
 			path = model;
@@ -215,6 +223,9 @@
 			dependencies = (
 			);
 			name = MessUp;
+			packageProductDependencies = (
+				509D5D2D282214840014938F /* Kingfisher */,
+			);
 			productName = MessUp;
 			productReference = 509929082810EAC80035E1AF /* MessUp.app */;
 			productType = "com.apple.product-type.application";
@@ -287,6 +298,9 @@
 				Base,
 			);
 			mainGroup = 509928FF2810EAC80035E1AF;
+			packageReferences = (
+				509D5D2C282214840014938F /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 509929092810EAC80035E1AF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -336,9 +350,11 @@
 				500638E7281FA1A400ADB977 /* MessUpDataModel.xcdatamodeld in Sources */,
 				5020AD0E2814DD5500C7C6B0 /* LoginViewController.swift in Sources */,
 				500638E2281F73A700ADB977 /* TwitterLoginWebViewController.swift in Sources */,
+				509D5D2928220D490014938F /* ContactOrm.swift in Sources */,
 				50280DBB281FC7ED003EE161 /* MoreTableViewController.swift in Sources */,
 				504E04F42814D83800E3C06C /* LinkedInCredentialsExample.swift in Sources */,
 				509D5D272821FDE30014938F /* MyUserdata.swift in Sources */,
+				509D5D2B28220DF90014938F /* ContactsModel.swift in Sources */,
 				501CC4822817861C00462760 /* LinkedInCredentials.swift in Sources */,
 				5099290C2810EAC80035E1AF /* AppDelegate.swift in Sources */,
 				5099290E2810EAC80035E1AF /* SceneDelegate.swift in Sources */,
@@ -690,6 +706,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		509D5D2C282214840014938F /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		509D5D2D282214840014938F /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 509D5D2C282214840014938F /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		500638E5281FA1A400ADB977 /* MessUpDataModel.xcdatamodeld */ = {

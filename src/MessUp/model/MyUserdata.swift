@@ -7,13 +7,6 @@
 
 import Foundation
 
-
-// ["data": {
-//     id = 1002315320797814784;
-//     name = "Sunghyun Cho";
-//     username = anaclumos;
-// }]
-
 class MyUserdata {
     var id: String
     var name: String
