@@ -128,7 +128,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="More" largeTitleDisplayMode="always" id="ygl-fb-jVy">
-                        <barButtonItem key="rightBarButtonItem" title="Reset Token" id="Fi1-gb-cHz">
+                        <barButtonItem key="rightBarButtonItem" title="Logout" id="Fi1-gb-cHz">
                             <connections>
                                 <action selector="resetTokenDidTapped:" destination="Ndo-tS-Fkv" id="YtC-Rk-WZH"/>
                             </connections>
@@ -235,7 +235,7 @@
                             <outlet property="delegate" destination="NO3-pV-UpC" id="2Ts-b0-bfN"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Contacts Matching" id="hpb-hi-Osy">
+                    <navigationItem key="navigationItem" title="Contacts Matching" largeTitleDisplayMode="always" id="hpb-hi-Osy">
                         <barButtonItem key="leftBarButtonItem" title="Username" id="IjH-B7-FDN">
                             <connections>
                                 <action selector="usernameButtonDidTapped:" destination="NO3-pV-UpC" id="gOX-rx-jM1"/>

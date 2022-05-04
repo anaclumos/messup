@@ -16,7 +16,7 @@ class TwitterApiManager {
   init() {}
 
   func getMyTwitterData(completion: @escaping ([String: Any]) -> Void) {
-    let my_username : String = model.getMyUsername()
+    let my_username: String = model.getMyUsername()
     let url = URL(string: "https://api.twitter.com/2/users/by/username/\(my_username)")!
     var request = URLRequest(url: url)
     request.httpMethod = "GET"

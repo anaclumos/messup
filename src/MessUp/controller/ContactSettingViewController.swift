@@ -75,7 +75,7 @@ class ContactSettingViewController: UIViewController, CNContactPickerDelegate, C
   func updateContacts(image: UIImage) {
     DispatchQueue.main.async {
       Amplitude.instance().logEvent("Updated Contacts")
-      
+
       // Create a new contact
       let contact = CNMutableContact()
 

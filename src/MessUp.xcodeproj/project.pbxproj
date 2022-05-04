@@ -10,11 +10,9 @@
 		500638E2281F73A700ADB977 /* TwitterLoginWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500638E1281F73A700ADB977 /* TwitterLoginWebViewController.swift */; };
 		500638E4281F76B500ADB977 /* TwitterCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500638E3281F76B500ADB977 /* TwitterCredentials.swift */; };
 		500638E7281FA1A400ADB977 /* MessUpDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 500638E5281FA1A400ADB977 /* MessUpDataModel.xcdatamodeld */; };
-		501CC4822817861C00462760 /* LinkedInCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501CC4812817861C00462760 /* LinkedInCredentials.swift */; };
 		5020AD0E2814DD5500C7C6B0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5020AD0D2814DD5500C7C6B0 /* LoginViewController.swift */; };
 		50280DBB281FC7ED003EE161 /* MoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50280DBA281FC7ED003EE161 /* MoreTableViewController.swift */; };
 		50280DBD281FC9B7003EE161 /* TwitterApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50280DBC281FC9B7003EE161 /* TwitterApiManager.swift */; };
-		504E04F42814D83800E3C06C /* LinkedInCredentialsExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504E04F32814D83800E3C06C /* LinkedInCredentialsExample.swift */; };
 		5099290C2810EAC80035E1AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5099290B2810EAC80035E1AF /* AppDelegate.swift */; };
 		5099290E2810EAC80035E1AF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5099290D2810EAC80035E1AF /* SceneDelegate.swift */; };
 		509929132810EAC80035E1AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 509929112810EAC80035E1AF /* Main.storyboard */; };
@@ -54,11 +52,9 @@
 		500638E1281F73A700ADB977 /* TwitterLoginWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterLoginWebViewController.swift; sourceTree = "<group>"; };
 		500638E3281F76B500ADB977 /* TwitterCredentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterCredentials.swift; sourceTree = "<group>"; };
 		500638E6281FA1A400ADB977 /* PersistentStorage.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PersistentStorage.xcdatamodel; sourceTree = "<group>"; };
-		501CC4812817861C00462760 /* LinkedInCredentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedInCredentials.swift; sourceTree = "<group>"; };
 		5020AD0D2814DD5500C7C6B0 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		50280DBA281FC7ED003EE161 /* MoreTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreTableViewController.swift; sourceTree = "<group>"; };
 		50280DBC281FC9B7003EE161 /* TwitterApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterApiManager.swift; sourceTree = "<group>"; };
-		504E04F32814D83800E3C06C /* LinkedInCredentialsExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedInCredentialsExample.swift; sourceTree = "<group>"; };
 		509929082810EAC80035E1AF /* MessUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MessUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5099290B2810EAC80035E1AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5099290D2810EAC80035E1AF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,8 +105,6 @@
 		501CC480281785FC00462760 /* env */ = {
 			isa = PBXGroup;
 			children = (
-				504E04F32814D83800E3C06C /* LinkedInCredentialsExample.swift */,
-				501CC4812817861C00462760 /* LinkedInCredentials.swift */,
 				500638E3281F76B500ADB977 /* TwitterCredentials.swift */,
 			);
 			path = env;
@@ -359,10 +353,8 @@
 				500638E2281F73A700ADB977 /* TwitterLoginWebViewController.swift in Sources */,
 				509D5D2928220D490014938F /* ContactOrm.swift in Sources */,
 				50280DBB281FC7ED003EE161 /* MoreTableViewController.swift in Sources */,
-				504E04F42814D83800E3C06C /* LinkedInCredentialsExample.swift in Sources */,
 				509D5D272821FDE30014938F /* MyUserdata.swift in Sources */,
 				509D5D2B28220DF90014938F /* ContactsModel.swift in Sources */,
-				501CC4822817861C00462760 /* LinkedInCredentials.swift in Sources */,
 				5099290C2810EAC80035E1AF /* AppDelegate.swift in Sources */,
 				5099290E2810EAC80035E1AF /* SceneDelegate.swift in Sources */,
 				509D5D3028222F2B0014938F /* ContactSettingViewController.swift in Sources */,

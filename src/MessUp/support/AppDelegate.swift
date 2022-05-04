@@ -6,8 +6,8 @@
 //
 
 import Amplitude
-import UIKit
 import CoreData
+import UIKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     Amplitude.instance().setUserId("userId")
     // Log an event
     Amplitude.instance().logEvent("app_start")
-    
+
     return true
   }
 
