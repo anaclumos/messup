@@ -15,10 +15,11 @@ class TwitterApiManager {
   init() {}
 
   func getMyTwitterData(completion: @escaping ([String: Any]) -> Void) {
-    let url = URL(string: "https://api.twitter.com/2/users/me")!
+    let my_username : String = model.getMyUsername()
+    let url = URL(string: "https://api.twitter.com/2/users/by/username/\(my_username)")!
     var request = URLRequest(url: url)
     request.httpMethod = "GET"
-    request.setValue("Bearer \(model.getTwitterAccessToken()!)", forHTTPHeaderField: "Authorization")
+    request.setValue("Bearer \(APP_BEARER_TOKEN)", forHTTPHeaderField: "Authorization")
     request.setValue("application/json", forHTTPHeaderField: "Content-Type")
     request.setValue("application/json", forHTTPHeaderField: "Accept")
     print(request)

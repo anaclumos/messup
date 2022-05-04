@@ -33,6 +33,24 @@ class AccessTokenModel {
     return twitterAccessToken
   }
 
+  func getMyUsername() -> String {
+    return twitterAccessToken?.my_username ?? ""
+  }
+
+  func setMyUsername (username: String) {
+    twitterAccessToken?.my_username = username
+    guard let appDelegate = UIApplication.shared.delegate as? AppDelegate
+    else {
+      return
+    }
+    let managedContext = appDelegate.persistentContainer.viewContext
+    do {
+      try managedContext.save()
+    } catch let error as NSError {
+      print("Could not save. \(error), \(error.userInfo)")
+    }
+  }
+
   func isLoggedIn() -> Bool {
     if twitterAccessToken == nil {
       return false

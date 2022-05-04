@@ -13,75 +13,56 @@ class ContactsMatchingViewController: UICollectionViewController {
   private let twitterApiManager = TwitterApiManager.shared
   private let model = AccessTokenModel.shared
 
-  // // override init
-  // override init(collectionViewLayout layout: UICollectionViewLayout) {
-  //   super.init(collectionViewLayout: layout)
-  //   DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-  //     let accessToken = self.model.getTwitterAccessToken()!
-  //     let alert = UIAlertController(title: "AccessToken already exists in CoreData", message: "Token: \(String(describing: accessToken))", preferredStyle: .alert)
-  //     alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-  //     self.present(alert, animated: true, completion: nil)
-  //   }
-  // }
-
-  // // init coder
-  // required init?(coder aDecoder: NSCoder) {
-  //   super.init(coder: aDecoder)
-  // }
-
   @IBAction func refreshButtonDidTapped(_ sender: Any) {
     print("button tapped")
+    print(model.getTwitterAccessToken() as Any)
     self.twitterApiManager.getMyTwitterData { response in
-      print(response)
-      self.twitterApiManager.getUserFollowers(userId: response["id"] as! String) { json in
-        print(json)
+
+      // try decoding data field as MyUserdata
+
+      guard let data = response["data"] as? [String: Any] else {
+        print("data field is not a dictionary")
+        return
+      }
+
+      guard let id = data["id"] as? String else {
+        print("id field is not a string")
+        return
+      }
+
+      guard let name = data["name"] as? String else {
+        print("name field is not a string")
+        return
+      }
+
+      guard let username = data["username"] as? String else {
+        print("username field is not a string")
+        return
+      }
+
+      let myUserdata = MyUserdata(id: id, name: name, username: username)
+
+      self.twitterApiManager.getUserFollowers(userId: id) { response in
+        print(response)
       }
     }
   }
 
   @IBAction func usernameButtonDidTapped(_ sender: Any) {
-    // fetch from core data, look for my_username at TwitterAccessToken
-    // fetch
-    var username: String?
-
-    guard let appDelegate = UIApplication.shared.delegate as? AppDelegate
-    else {
-      return
-    }
-    let managedContext = appDelegate.persistentContainer.viewContext
-    let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "TwitterAccessToken")
-    do {
-      let twitterAccessToken = try managedContext.fetch(fetchRequest).first as? TwitterAccessToken
-      username = twitterAccessToken?.my_username
-    } catch let error as NSError {
-      print("Could not fetch. \(error), \(error.userInfo)")
-    }
+    var username = self.model.getMyUsername()
 
     let alert = UIAlertController(title: "Enter your Twitter Username", message: nil, preferredStyle: .alert)
     alert.addTextField { textField in
-      if username != nil || username != "" {
+      if username != "" {
         textField.text = username
-      }
-      else {
+      } else {
         textField.placeholder = "Twitter Username"
       }
     }
     alert.addAction(UIAlertAction(title: "OK", style: .default, handler: {
       _ in
-      username = alert.textFields?.first?.text
-      guard let appDelegate = UIApplication.shared.delegate as? AppDelegate
-      else {
-        return
-      }
-      let managedContext = appDelegate.persistentContainer.viewContext
-      let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "TwitterAccessToken")
-      do {
-        let twitterAccessToken = try managedContext.fetch(fetchRequest).first as? TwitterAccessToken
-        twitterAccessToken?.my_username = username
-        try managedContext.save()
-      } catch let error as NSError {
-        print("Could not fetch. \(error), \(error.userInfo)")
-      }
+      username = alert.textFields![0].text ?? ""
+      self.model.setMyUsername(username: username)
     }))
     present(alert, animated: true, completion: nil)
   }
