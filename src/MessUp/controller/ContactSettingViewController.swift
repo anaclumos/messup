@@ -72,6 +72,7 @@ class ContactSettingViewController: UIViewController, CNContactPickerDelegate, C
     }
   }
 
+  // MARK: - Creates a new contact and adds it to the user's contacts.
   func updateContacts(image: UIImage) {
     DispatchQueue.main.async {
       Amplitude.instance().logEvent("Updated Contacts")
@@ -103,6 +104,7 @@ class ContactSettingViewController: UIViewController, CNContactPickerDelegate, C
     }
   }
 
+  // MARK: - Prompts Error
   func promptError(error: String) {
     Amplitude.instance().logEvent("Error: \(error)")
     let alert = UIAlertController(title: "Error", message: error, preferredStyle: .alert)
@@ -110,6 +112,7 @@ class ContactSettingViewController: UIViewController, CNContactPickerDelegate, C
     present(alert, animated: true, completion: nil)
   }
 
+  // MARK: - Prompts Success Message
   func promptSuccess() {
     let alert = UIAlertController(title: "Success", message: "Contact saved", preferredStyle: .alert)
     alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))

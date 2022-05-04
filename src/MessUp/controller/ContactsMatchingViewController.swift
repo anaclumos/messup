@@ -156,6 +156,7 @@ class ContactsMatchingViewController: UITableViewController {
     present(alert, animated: true, completion: nil)
   }
 
+  // MARK: - Checks if username is valid
   func isValid(username: String) -> Bool {
     if username.count > 15 || username.count < 1 {
       getUsernameInput(message: "Username must be alphanumeric between 1 and 15 characters")
@@ -168,6 +169,7 @@ class ContactsMatchingViewController: UITableViewController {
     return true
   }
 
+  // MARK: - Prepare for segue to ContactSettingsViewController
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     if segue.identifier == "loadProfile" {
       let destination = segue.destination as! ContactSettingViewController

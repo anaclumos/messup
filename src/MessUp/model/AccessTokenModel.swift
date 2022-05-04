@@ -14,7 +14,7 @@ class AccessTokenModel {
   var twitterAccessToken: TwitterAccessToken?
 
   static let shared = AccessTokenModel()
-
+  
   init() {
     refresh()
   }
@@ -44,26 +44,21 @@ class AccessTokenModel {
 
   func setMyUsername(username: String) {
     refresh()
-    print("trying to save \(username)")
     if twitterAccessToken == nil {
-      print("twitterAccessToken is nil")
       return
     }
     twitterAccessToken!.my_username = username
     guard let appDelegate = UIApplication.shared.delegate as? AppDelegate
     else {
-      print("no appDelegate")
       return
     }
     let managedContext = appDelegate.persistentContainer.viewContext
     do {
       // save twitterAccessToken to CoreData
       try managedContext.save()
-      print("saved")
     } catch let error as NSError {
       print("Could not save. \(error), \(error.userInfo)")
     }
-    print("saved username. username is now \(String(describing: twitterAccessToken?.my_username))")
   }
 
   func isLoggedIn() -> Bool {
