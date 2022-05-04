@@ -26,4 +26,11 @@ class ContactsModel {
   func get(index: Int) -> ContactOrm {
     return contacts[index]
   }
+
+  func filter(keyword: String) -> [ContactOrm] {
+    let filteredContacts = contacts.filter {
+      $0.name.lowercased().contains(keyword.lowercased()) || $0.username.lowercased().contains(keyword.lowercased())
+    }
+    return filteredContacts
+  }
 }

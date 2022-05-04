@@ -20,7 +20,7 @@ class LoginViewController: UIViewController {
     super.viewDidLoad()
     if model.isLoggedIn() {
       DispatchQueue.main.async {
-        let controller = self.storyboard?.instantiateViewController(withIdentifier: "MessUpTabBarController") as! UITabBarController
+        let controller = self.storyboard?.instantiateViewController(withIdentifier: "MessUpController") as! UINavigationController
         controller.modalPresentationStyle = .fullScreen
         self.present(controller, animated: true, completion: nil)
       }
@@ -38,7 +38,7 @@ class LoginViewController: UIViewController {
       print("LoginViewController prepare for segue")
       vc.onAccessTokenAcquired = {
         DispatchQueue.main.async {
-          let controller = self.storyboard?.instantiateViewController(withIdentifier: "MessUpTabBarController") as! UITabBarController
+          let controller = self.storyboard?.instantiateViewController(withIdentifier: "MessUpController") as! UINavigationController
           controller.modalPresentationStyle = .fullScreen
           self.present(controller, animated: true, completion: nil)
         }
