@@ -139,7 +139,7 @@ class ContactsMatchingViewController: UITableViewController {
     let cell = tableView.dequeueReusableCell(withIdentifier: "ContactsMatchingTableViewCell", for: indexPath) as! ContactsMatchingTableViewCell
     let contact = contactsModel.get(index: indexPath.row)
     cell.nameLabel?.text = contact.getName()
-    cell.usernameLabel?.text = contact.getUsername()
+    cell.usernameLabel?.text = "@" + contact.getUsername()
     let profileImageUrl = contact.getProfileImageUrl().replacingOccurrences(of: "_normal", with: "")
     cell.profileImageView?.kf.setImage(with: URL(string: profileImageUrl))
     return cell
@@ -161,5 +161,15 @@ class ContactsMatchingViewController: UITableViewController {
       return false
     }
     return true
+  }
+
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if segue.identifier == "loadProfile" {
+      print("loadProfile")
+      let destination = segue.destination as! ContactSettingViewController
+      let index = tableView.indexPathForSelectedRow!.row
+      destination.imageUrl = contactsModel.get(index: index).getProfileImageUrl()
+      destination.username = contactsModel.get(index: index).getUsername()
+    }
   }
 }

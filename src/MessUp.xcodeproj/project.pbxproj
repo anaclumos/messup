@@ -27,6 +27,7 @@
 		509D5D2928220D490014938F /* ContactOrm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509D5D2828220D490014938F /* ContactOrm.swift */; };
 		509D5D2B28220DF90014938F /* ContactsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509D5D2A28220DF90014938F /* ContactsModel.swift */; };
 		509D5D2E282214840014938F /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 509D5D2D282214840014938F /* Kingfisher */; };
+		509D5D3028222F2B0014938F /* ContactSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509D5D2F28222F2B0014938F /* ContactSettingViewController.swift */; };
 		50BD5207281629B90099D0DD /* AccessTokenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BD5206281629B90099D0DD /* AccessTokenModel.swift */; };
 		50F13433281F492A00702224 /* ContactsMatchingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F13432281F492A00702224 /* ContactsMatchingViewController.swift */; };
 /* End PBXBuildFile section */
@@ -72,6 +73,7 @@
 		509D5D262821FDE30014938F /* MyUserdata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyUserdata.swift; sourceTree = "<group>"; };
 		509D5D2828220D490014938F /* ContactOrm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactOrm.swift; sourceTree = "<group>"; };
 		509D5D2A28220DF90014938F /* ContactsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsModel.swift; sourceTree = "<group>"; };
+		509D5D2F28222F2B0014938F /* ContactSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactSettingViewController.swift; sourceTree = "<group>"; };
 		50BD5206281629B90099D0DD /* AccessTokenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessTokenModel.swift; sourceTree = "<group>"; };
 		50F13432281F492A00702224 /* ContactsMatchingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsMatchingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -127,6 +129,7 @@
 				50F13432281F492A00702224 /* ContactsMatchingViewController.swift */,
 				50280DBA281FC7ED003EE161 /* MoreTableViewController.swift */,
 				5020AD0D2814DD5500C7C6B0 /* LoginViewController.swift */,
+				509D5D2F28222F2B0014938F /* ContactSettingViewController.swift */,
 				500638E1281F73A700ADB977 /* TwitterLoginWebViewController.swift */,
 			);
 			path = controller;
@@ -358,6 +361,7 @@
 				501CC4822817861C00462760 /* LinkedInCredentials.swift in Sources */,
 				5099290C2810EAC80035E1AF /* AppDelegate.swift in Sources */,
 				5099290E2810EAC80035E1AF /* SceneDelegate.swift in Sources */,
+				509D5D3028222F2B0014938F /* ContactSettingViewController.swift in Sources */,
 				50BD5207281629B90099D0DD /* AccessTokenModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
