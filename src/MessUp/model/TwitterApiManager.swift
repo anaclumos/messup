@@ -9,13 +9,10 @@ import Foundation
 
 class TwitterApiManager {
   private let model = AccessTokenModel.shared
-
   static let shared = TwitterApiManager()
-
   public let APP_BEARER_TOKEN = TwitterCredentials.APP_BEARER_TOKEN
 
-  init() {
-  }
+  init() {}
 
   func getMyTwitterData(completion: @escaping ([String: Any]) -> Void) {
     let url = URL(string: "https://api.twitter.com/2/users/me")!

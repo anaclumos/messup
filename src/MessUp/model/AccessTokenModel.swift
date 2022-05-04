@@ -24,7 +24,6 @@ class AccessTokenModel {
 
     do {
       twitterAccessToken = try managedContext.fetch(fetchRequest).first as? TwitterAccessToken
-      print("We have token presaved: " + (twitterAccessToken?.access_token)!)
     } catch let error as NSError {
       print("Could not fetch. \(error), \(error.userInfo)")
     }
@@ -58,7 +57,6 @@ class AccessTokenModel {
       else {
         return
       }
-
       let access_token = json["access_token"] as? String
       let token_type = json["token_type"] as? String
       let expires_in = json["expires_in"] as? Int

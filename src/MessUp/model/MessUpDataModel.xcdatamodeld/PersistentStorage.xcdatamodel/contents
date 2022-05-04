@@ -4,10 +4,11 @@
         <attribute name="access_token" optional="YES" attributeType="String"/>
         <attribute name="expires_in" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="expiry_date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="my_username" optional="YES" attributeType="String"/>
         <attribute name="scope" optional="YES" attributeType="String"/>
         <attribute name="token_type" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="TwitterAccessToken" positionX="-63" positionY="-18" width="128" height="104"/>
+        <element name="TwitterAccessToken" positionX="-63" positionY="-18" width="128" height="119"/>
     </elements>
 </model>

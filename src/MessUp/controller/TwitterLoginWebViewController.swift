@@ -22,11 +22,28 @@ class TwitterLoginWebViewController: UIViewController, WKNavigationDelegate {
     TwitterLoginView.navigationDelegate = self
 
     if model.getTwitterAccessToken() != nil {
-      onAccessTokenAcquired?()
-    } else {
-    getRequestToken()
+      if model.getTwitterAccessToken()!.expiry_date != nil {
+        if model.getTwitterAccessToken()!.expiry_date! < Date() {
+          model.logoutTwitter()
+        }
+      }
     }
 
+    if model.getTwitterAccessToken() != nil {
+      DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+        let accessToken = self.model.getTwitterAccessToken()!
+        let alert = UIAlertController(title: "AccessToken already exists in CoreData", message: "Token: \(String(describing: accessToken))", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in
+          self.dismiss(animated: true, completion: nil)
+          let controller = self.storyboard?.instantiateViewController(withIdentifier: "MessUpTabBarController") as! UITabBarController
+          controller.modalPresentationStyle = .fullScreen
+          self.present(controller, animated: true, completion: nil)
+        }))
+        self.present(alert, animated: true, completion: nil)
+      }
+    } else {
+      getRequestToken()
+    }
   }
 
   private func getRequestToken() {
@@ -63,45 +80,42 @@ class TwitterLoginWebViewController: UIViewController, WKNavigationDelegate {
     }
     decisionHandler(.allow)
   }
-  
+
   func getAccessToken(code: String) {
-      var components = URLComponents()
-      components.scheme = "https"
-      components.host = "api.twitter.com"
-      components.path = "/2/oauth2/token"
-      components.queryItems = [
-        URLQueryItem(name: "code", value: code.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!),
-        URLQueryItem(name: "grant_type", value: "authorization_code"),
-        URLQueryItem(name: "client_id", value: TwitterCredentials.CLIENT_ID.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!),
-        URLQueryItem(name: "redirect_uri", value: TwitterCredentials.REDIRECT_URI.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!),
-        URLQueryItem(name: "code_verifier", value: TwitterCredentials.CODE_VERIFIER.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)
-      ]
-      // use POST method
-      var request = URLRequest(url: components.url!)
-      request.httpMethod = "POST"
-      request.allHTTPHeaderFields = [
-        "Content-Type": "application/x-www-form-urlencoded"
-      ]
+    var components = URLComponents()
+    components.scheme = "https"
+    components.host = "api.twitter.com"
+    components.path = "/2/oauth2/token"
+    components.queryItems = [
+      URLQueryItem(name: "code", value: code.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!),
+      URLQueryItem(name: "grant_type", value: "authorization_code"),
+      URLQueryItem(name: "client_id", value: TwitterCredentials.CLIENT_ID.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!),
+      URLQueryItem(name: "redirect_uri", value: TwitterCredentials.REDIRECT_URI.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!),
+      URLQueryItem(name: "code_verifier", value: TwitterCredentials.CODE_VERIFIER.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)
+    ]
+    // use POST method
+    var request = URLRequest(url: components.url!)
+    request.httpMethod = "POST"
+    request.allHTTPHeaderFields = [
+      "Content-Type": "application/x-www-form-urlencoded"
+    ]
 
-      let task = URLSession.shared.dataTask(with: request) { data, _, error in
-        if error != nil {
-          return
-        }
-        if let data = data {
-          do {
-            print("data loaded!: \(String(data: data, encoding: .utf8)!)")
-
-            let json = try JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
-
-            self.model.setTwitterAccessToken(json: json)
-            self.onAccessTokenAcquired?()
-          } catch {
-            print("requestAccessToken Error: \(error)")
-          }
+    let task = URLSession.shared.dataTask(with: request) { data, _, error in
+      if error != nil {
+        return
+      }
+      if let data = data {
+        do {
+          let json = try JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
+          self.model.setTwitterAccessToken(json: json)
+          self.onAccessTokenAcquired?()
+        } catch {
+          print("requestAccessToken Error: \(error)")
         }
       }
-      task.resume()
     }
+    task.resume()
+  }
 
   func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
     spinner.isHidden = false
