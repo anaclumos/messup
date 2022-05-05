@@ -54,7 +54,7 @@ class ContactSettingViewController: UIViewController, CNContactPickerDelegate, C
     if username == nil {
       return
     }
-    guard let url = URL(string: "https://twitter.com/\(username ?? "")") else {
+    guard let url = URL(string: "twitter://user?screen_name=" + username) else {
       return
     }
     UIApplication.shared.open(url, options: [:], completionHandler: nil)
@@ -84,7 +84,7 @@ class ContactSettingViewController: UIViewController, CNContactPickerDelegate, C
       contact.imageData = image.jpegData(compressionQuality: 1.0)
 
       // set contact social
-      let twitter = CNSocialProfile(urlString: "https://twitter.com/\(self.username ?? "")", username: self.username, userIdentifier: nil, service: CNSocialProfileServiceTwitter)
+      let twitter = CNSocialProfile(urlString: "twitter://user?screen_name=" + self.username, username: self.username, userIdentifier: nil, service: CNSocialProfileServiceTwitter)
       let social: CNLabeledValue<CNSocialProfile> = CNLabeledValue(label: "Twitter", value: twitter)
       contact.socialProfiles.append(social)
 

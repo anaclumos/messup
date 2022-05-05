@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4sV-P3-hms">
-                                <rect key="frame" x="98" y="420" width="218" height="56"/>
+                                <rect key="frame" x="20" y="756" width="374" height="56"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="7tz-jW-dIh"/>
                                 </constraints>
@@ -30,16 +31,29 @@
                                     <segue destination="lrD-f5-hfX" kind="presentation" identifier="LoginWithLinkedIn" id="w68-jk-wNw"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Up your Messages Experience" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SdX-2y-anQ">
+                                <rect key="frame" x="50" y="328.5" width="314" height="239"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <color key="highlightedColor" name="AccentColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="4sV-P3-hms" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="L6w-2V-aOs"/>
-                            <constraint firstItem="4sV-P3-hms" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="PFm-Fa-8Rq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="SdX-2y-anQ" secondAttribute="trailing" constant="50" id="0L5-pN-gEs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="4sV-P3-hms" secondAttribute="trailing" constant="20" id="0Ld-zE-JgT"/>
+                            <constraint firstItem="4sV-P3-hms" firstAttribute="leading" relation="lessThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="5aP-8S-Xcx"/>
+                            <constraint firstItem="SdX-2y-anQ" firstAttribute="leading" relation="lessThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="GGw-c2-SfR"/>
+                            <constraint firstItem="SdX-2y-anQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RN6-UP-a6d"/>
+                            <constraint firstItem="SdX-2y-anQ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="kfc-ca-eko"/>
+                            <constraint firstItem="4sV-P3-hms" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nDs-zM-3Kt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4sV-P3-hms" secondAttribute="bottom" constant="50" id="ptv-y0-Ppm"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="LinkedInLoginButton" destination="4sV-P3-hms" id="NVb-jm-Y0W"/>
+                        <outlet property="heroMessage" destination="SdX-2y-anQ" id="T3F-UN-7oU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -151,14 +165,14 @@
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Xs-gR-MP0">
                                             <rect key="frame" x="20" y="21" width="284" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="puo-Ep-bKy">
                                             <rect key="frame" x="20" y="82" width="284" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
+                                            <color key="textColor" systemColor="secondaryLabelColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -278,6 +292,12 @@
         </scene>
     </scenes>
     <resources>
+        <namedColor name="AccentColor">
+            <color red="0.33300000429153442" green="0.59200000762939453" blue="0.92500001192092896" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
