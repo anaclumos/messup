@@ -121,7 +121,6 @@
         <!--Navigation Controller-->
         <scene sceneID="DR1-HM-exf">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="oHv-SY-Dd9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController storyboardIdentifier="MessUpController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nuH-S1-kte" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" systemItem="contacts" id="5hf-2d-7Sj"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="alC-ea-81V">
@@ -132,6 +131,7 @@
                         <segue destination="NO3-pV-UpC" kind="relationship" relationship="rootViewController" id="qj2-rH-r0g"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oHv-SY-Dd9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="29" y="893"/>
         </scene>
@@ -164,20 +164,20 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Xs-gR-MP0">
-                                            <rect key="frame" x="20" y="21" width="284" height="21"/>
+                                            <rect key="frame" x="20" y="26" width="284" height="21"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="puo-Ep-bKy">
-                                            <rect key="frame" x="20" y="82" width="284" height="21"/>
+                                            <rect key="frame" x="20" y="77" width="284" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" systemColor="secondaryLabelColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="6Xs-gR-MP0" firstAttribute="top" secondItem="6j7-u8-sCF" secondAttribute="topMargin" constant="10" id="4nc-DO-C93"/>
+                                        <constraint firstItem="6Xs-gR-MP0" firstAttribute="top" secondItem="6j7-u8-sCF" secondAttribute="topMargin" constant="15" id="4nc-DO-C93"/>
                                         <constraint firstItem="ptD-gt-zWW" firstAttribute="top" secondItem="6j7-u8-sCF" secondAttribute="topMargin" id="6US-bz-acS"/>
                                         <constraint firstItem="puo-Ep-bKy" firstAttribute="leading" secondItem="6j7-u8-sCF" secondAttribute="leadingMargin" id="EC9-t3-mXj"/>
                                         <constraint firstItem="puo-Ep-bKy" firstAttribute="top" relation="greaterThanOrEqual" secondItem="6Xs-gR-MP0" secondAttribute="bottom" constant="10" id="Hlu-iS-eCZ"/>
@@ -186,7 +186,7 @@
                                         <constraint firstItem="ptD-gt-zWW" firstAttribute="trailing" secondItem="6j7-u8-sCF" secondAttribute="trailingMargin" id="Oxl-AW-arW"/>
                                         <constraint firstItem="ptD-gt-zWW" firstAttribute="bottom" secondItem="6j7-u8-sCF" secondAttribute="bottomMargin" id="X8s-kq-6HK"/>
                                         <constraint firstItem="ptD-gt-zWW" firstAttribute="leading" secondItem="puo-Ep-bKy" secondAttribute="trailing" constant="10" id="mkN-Sf-7ET"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="puo-Ep-bKy" secondAttribute="bottom" constant="10" id="vea-4N-rO0"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="puo-Ep-bKy" secondAttribute="bottom" constant="15" id="vea-4N-rO0"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>

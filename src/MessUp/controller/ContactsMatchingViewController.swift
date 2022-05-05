@@ -15,18 +15,23 @@ class ContactsMatchingTableViewCell: UITableViewCell {
   @IBOutlet var profileImageView: UIImageView!
   @IBOutlet var nameLabel: UILabel!
   @IBOutlet var usernameLabel: UILabel!
+  
+  override func awakeFromNib() {
+    super.awakeFromNib()
+    profileImageView.layer.cornerRadius = profileImageView.frame.width / 2
+  }
 }
 
 class ContactsMatchingViewController: UITableViewController, UISearchBarDelegate {
   private let twitterApiManager = TwitterApiManager.shared
   private let model = AccessTokenModel.shared
   private let contactsModel = ContactsModel.shared
-  
+
   var filteredContacts: [ContactOrm] = []
 
   var username: String = ""
 
-  @IBOutlet weak var searchBar: UISearchBar!
+  @IBOutlet var searchBar: UISearchBar!
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -90,8 +95,9 @@ class ContactsMatchingViewController: UITableViewController, UISearchBarDelegate
       }
 
       self.twitterApiManager.getUserFollowers(userId: id) { response in
+        
         guard let data = response["data"] as? [[String: Any]] else {
-          self.promptError(error: "data field is not a dictionary")
+          self.promptError(error: String(describing: response))
           return
         }
         var contacts: [ContactOrm] = []
